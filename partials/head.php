@@ -1,6 +1,6 @@
 <?php
 $config = site_config();
-$heroImage = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=2400&amp;q=85';
+$heroImage = asset('images/alpes-hero-mountains.webp');
 ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@ $heroImage = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="<?= $heroImage ?>">
+<link rel="preload" as="image" href="<?= e($heroImage) ?>" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= e(asset('css/style.css')) ?>">
 <script src="<?= e(asset('js/main.js')) ?>" defer></script>

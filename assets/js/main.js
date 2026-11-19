@@ -1,6 +1,146 @@
 (() => {
   'use strict';
 
+  function initHeroSlider() {
+    const hero = document.querySelector('[data-hero-slider]');
+    if (!hero) return;
+
+    const slides = Array.from(hero.querySelectorAll('[data-slide-content]'));
+    const images = Array.from(hero.querySelectorAll('[data-slide-image]'));
+    const indicators = Array.from(hero.querySelectorAll('[data-slide-target]'));
+    const previous = hero.querySelector('.hero-arrow-prev');
+    const next = hero.querySelector('.hero-arrow-next');
+    const status = hero.querySelector('#hero-slide-status');
+    if (slides.length < 2) return;
+
+    const AUTOPLAY_MS = 6000;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let timer = null;
+    let hoverPaused = false;
+    let interactionPaused = reducedMotion.matches;
+    let changeToken = 0;
+
+    function ensureImage(index) {
+      const layer = images[index];
+      const image = layer && layer.querySelector('img');
+      if (!image) return Promise.resolve();
+
+      if (!image.getAttribute('src') && image.dataset.src) {
+        image.src = image.dataset.src;
+      }
+      if (image.complete && image.naturalWidth > 0) return Promise.resolve();
+      if (typeof image.decode === 'function') return image.decode().catch(() => {});
+
+      return new Promise((resolve) => {
+        image.addEventListener('load', resolve, { once: true });
+        image.addEventListener('error', resolve, { once: true });
+      });
+    }
+
+    function stopTimer() {
+      if (timer !== null) {
+        window.clearTimeout(timer);
+        timer = null;
+      }
+      hero.classList.add('is-paused');
+    }
+
+    function scheduleNext() {
+      stopTimer();
+      if (interactionPaused || hoverPaused || reducedMotion.matches) return;
+      hero.classList.remove('is-paused');
+      timer = window.setTimeout(() => {
+        goTo(current + 1, false);
+      }, AUTOPLAY_MS);
+    }
+
+    function setActive(index) {
+      slides.forEach((slide, i) => {
+        const active = i === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+        if (active) slide.removeAttribute('inert');
+        else slide.setAttribute('inert', '');
+      });
+
+      images.forEach((layer, i) => layer.classList.toggle('is-active', i === index));
+      indicators.forEach((button, i) => {
+        const active = i === index;
+        button.classList.toggle('is-active', active);
+        if (active) button.setAttribute('aria-current', 'true');
+        else button.removeAttribute('aria-current');
+      });
+
+      current = index;
+    }
+
+    async function goTo(index, userInitiated = true) {
+      const target = ((index % slides.length) + slides.length) % slides.length;
+      if (userInitiated) interactionPaused = true;
+
+      const token = ++changeToken;
+      stopTimer();
+      await ensureImage(target);
+      if (token !== changeToken) return;
+
+      setActive(target);
+
+      if (userInitiated && status) {
+        const heading = slides[target].querySelector('.hero-heading');
+        const label = heading ? heading.textContent.replace(/\s+/g, ' ').trim() : '';
+        status.textContent = `Diapositive ${target + 1} sur ${slides.length}${label ? ' : ' + label : ''}`;
+      }
+
+      ensureImage((target + 1) % slides.length);
+      scheduleNext();
+    }
+
+    function pauseOnInteraction() {
+      interactionPaused = true;
+      stopTimer();
+    }
+
+    previous?.addEventListener('click', () => goTo(current - 1));
+    next?.addEventListener('click', () => goTo(current + 1));
+    indicators.forEach((button) => {
+      button.addEventListener('click', () => goTo(Number(button.dataset.slideTarget)));
+    });
+
+    hero.addEventListener('mouseenter', () => {
+      hoverPaused = true;
+      stopTimer();
+    });
+    hero.addEventListener('mouseleave', () => {
+      hoverPaused = false;
+      scheduleNext();
+    });
+    hero.addEventListener('focusin', (event) => {
+      if (event.target.closest('.hero-controls')) pauseOnInteraction();
+    });
+    hero.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      goTo(current + (event.key === 'ArrowRight' ? 1 : -1));
+    });
+
+    if (typeof reducedMotion.addEventListener === 'function') {
+      reducedMotion.addEventListener('change', () => {
+        if (reducedMotion.matches) stopTimer();
+        else if (!interactionPaused) scheduleNext();
+      });
+    }
+
+    slides.forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', String(i !== 0));
+      if (i !== 0) slide.setAttribute('inert', '');
+    });
+    ensureImage(1);
+    scheduleNext();
+  }
+
+  initHeroSlider();
+
   const header = document.getElementById('site-header');
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-navigation');

@@ -28,16 +28,13 @@
 
     <div class="container header-inner">
         <a class="brand" href="#accueil">
-            <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 70 50" fill="none" focusable="false">
-                    <path d="M4 43 24 14l11 15L46 5l20 38" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="m18 22 6-8 5 7M40 18l6-13 7 14" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </span>
-            <span class="brand-text">
-                <strong>ALPES TRANSPORT</strong>
-                <small>CHAMONIX · MONT-BLANC</small>
-            </span>
+            <img
+                class="brand-logo"
+                src="<?= e(asset('images/logo-Alpes-Transport.png')) ?>"
+                alt="Alpes Transport – Chauffeur privé à Chamonix-Mont-Blanc"
+                width="904"
+                height="225"
+            >
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu">

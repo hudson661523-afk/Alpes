@@ -1,0 +1,76 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Credentials, tokens, and keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa*
+id_ed25519*
+id_ecdsa*
+credentials.*
+*credentials.json
+*credentials.yml
+*credentials.yaml
+secrets.*
+*secrets.json
+*secrets.yml
+*secrets.yaml
+token.*
+*token*.json
+auth.json
+.htpasswd
+.netrc
+.git-credentials
+.npmrc
+.yarnrc
+.yarnrc.yml
+.pypirc
+
+# Logs
+logs/
+log/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary and backup files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Caches
+.cache/
+*.cache
+.phpunit.cache
+.phpunit.result.cache
+
+# Local configuration
+*.local
+*.local.*
+config.local.*
+local.config.*
+.idea/
+.vscode/
+*.sublime-workspace
+.settings/

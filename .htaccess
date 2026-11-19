@@ -1,0 +1,29 @@
+# Internal development documentation and sensitive files must never be served.
+# Keep these files in the repository, but deny direct anonymous HTTP access.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Internal documentation.
+  RewriteRule ^AGENTS\.md$ - [F,L]
+  RewriteRule ^docs(?:/|$) - [F,L]
+
+  # Git metadata, environment files and credential material.
+  RewriteRule ^\.git(?:/|$) - [F,L]
+  RewriteRule ^\.env(?:\..*)?$ - [F,L]
+  RewriteRule (?:^|/)(?:credentials|secrets|token)\.[^/]+$ - [F,L]
+  RewriteRule (?:^|/)auth\.json$ - [F,L]
+
+  # Archives, database dumps, backups, temporary files and logs.
+  RewriteRule \.(?:zip|tar|tar\.gz|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log)$ - [F,L]
+</IfModule>
+
+<FilesMatch "^(AGENTS\.md|\.env(?:\..*)?|credentials\..*|secrets\..*|token\..*|auth\.json|\.htpasswd|\.netrc|\.git-credentials|.*\.(?:zip|tar|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log))$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

@@ -14,6 +14,7 @@ $config = site_config();
 
     <main id="main">
         <?php require __DIR__ . '/partials/hero.php'; ?>
+        <?php require __DIR__ . '/partials/quick-booking.php'; ?>
 
         <section class="intro" id="intro" aria-labelledby="intro-title">
             <div class="container intro-inner">

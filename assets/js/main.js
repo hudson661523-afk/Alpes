@@ -303,3 +303,110 @@
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 })();
+
+/*
+ * Quick booking: prepares a copyable trip summary on the visitor's device.
+ * No booking API is assumed and no field value is transmitted automatically.
+ */
+(() => {
+  'use strict';
+
+  const form = document.querySelector('[data-quick-booking]');
+  if (!form) return;
+
+  const prepareButton = form.querySelector('[data-qb-prepare]');
+  const copyButton = form.querySelector('[data-qb-copy]');
+  const summary = form.querySelector('[data-qb-summary]');
+  const status = form.querySelector('[data-qb-status]');
+  const whatsapp = form.querySelector('[data-qb-whatsapp]');
+  const waBase = form.getAttribute('data-whatsapp-base') || '';
+  const dateInput = form.querySelector('#qb-date');
+
+  if (!prepareButton || !summary) return;
+
+  if (dateInput && !dateInput.min) {
+    const now = new Date();
+    dateInput.min = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+      .toISOString()
+      .slice(0, 10);
+  }
+
+  function fieldValue(id) {
+    const field = form.querySelector('#' + id);
+    return field ? field.value.trim() : '';
+  }
+
+  function buildSummary() {
+    const rawDate = fieldValue('qb-date');
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(rawDate)
+      ? rawDate.split('-').reverse().join('/')
+      : rawDate;
+
+    return [
+      'Bonjour Alpes Transport,',
+      '',
+      'Je souhaite organiser un trajet avec les détails suivants :',
+      'Départ : ' + fieldValue('qb-pickup'),
+      'Destination : ' + fieldValue('qb-destination'),
+      'Date : ' + date,
+      'Heure : ' + fieldValue('qb-time'),
+      'Passagers : ' + fieldValue('qb-passengers'),
+      '',
+      'Merci de me confirmer les modalités de ce trajet.'
+    ].join('\n');
+  }
+
+  function prepare() {
+    if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
+
+    const text = buildSummary();
+    summary.value = text;
+
+    if (whatsapp && waBase) {
+      whatsapp.href = waBase + '?text=' + encodeURIComponent(text);
+    }
+    if (status) {
+      status.textContent = 'Récapitulatif prêt à copier ou à envoyer.';
+    }
+    summary.focus({ preventScroll: true });
+  }
+
+  prepareButton.addEventListener('click', prepare);
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    prepare();
+  });
+
+  if (copyButton) {
+    copyButton.addEventListener('click', async () => {
+      if (!summary.value.trim()) {
+        if (status) status.textContent = 'Préparez d’abord votre récapitulatif.';
+        prepareButton.focus();
+        return;
+      }
+
+      try {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          throw new Error('Clipboard API unavailable');
+        }
+        await navigator.clipboard.writeText(summary.value);
+        if (status) status.textContent = 'Récapitulatif copié.';
+      } catch (error) {
+        summary.focus();
+        summary.select();
+        let copied = false;
+        try {
+          copied = document.execCommand('copy');
+        } catch (fallbackError) {
+          copied = false;
+        }
+        if (status) {
+          status.textContent = copied
+            ? 'Récapitulatif copié.'
+            : 'Sélectionnez le texte pour le copier.';
+        }
+      }
+    });
+  }
+})();

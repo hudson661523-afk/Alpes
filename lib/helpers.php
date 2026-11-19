@@ -23,6 +23,17 @@ if (!function_exists('e')) {
 if (!function_exists('asset')) {
     function asset(string $path): string
     {
-        return '/assets/' . ltrim($path, '/');
+        $relative = ltrim($path, '/');
+        $url = '/assets/' . $relative;
+        $file = __DIR__ . '/../assets/' . $relative;
+
+        if (is_file($file)) {
+            $modified = filemtime($file);
+            if ($modified !== false) {
+                $url .= '?v=' . $modified;
+            }
+        }
+
+        return $url;
     }
 }

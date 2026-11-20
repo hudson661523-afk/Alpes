@@ -1,15 +1,16 @@
 <?php
 $config = site_config();
-$aboutImage = asset('images/alpes-hero-mercedes-s-class.webp');
+$aboutImage = asset('images/alpes-about-chamonix.webp');
+$aboutImageFile = __DIR__ . '/../assets/images/alpes-about-chamonix.webp';
+$aboutImageSize = is_file($aboutImageFile) ? @getimagesize($aboutImageFile) : false;
 ?>
 <section class="about-section" id="a-propos" aria-labelledby="about-title">
     <div class="container about-inner">
         <div class="about-visual">
             <div class="about-image-frame">
                 <img src="<?= e($aboutImage) ?>"
-                     alt="Berline Mercedes sur une route de montagne, illustrant le service de chauffeur privé à Chamonix dans les Alpes"
-                     width="1672"
-                     height="941"
+                     alt="Alpes Transport, service de taxi et chauffeur privé à Chamonix-Mont-Blanc"
+                     <?php if ($aboutImageSize): ?>width="<?= e((string) $aboutImageSize[0]) ?>" height="<?= e((string) $aboutImageSize[1]) ?>"<?php endif; ?>
                      loading="lazy"
                      decoding="async">
             </div>

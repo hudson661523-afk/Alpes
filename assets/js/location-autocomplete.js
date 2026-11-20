@@ -466,7 +466,7 @@
       if (hidden.osmId) hidden.osmId.value = osmId;
       if (clearButton) clearButton.hidden = false;
       wrapper.classList.add('has-verified-location');
-      setStatus('Lieu sélectionné via OpenStreetMap. Aucune réservation effectuée.', 'verified');
+      setStatus('Lieu sélectionné', 'verified');
       state.lastQuery = '';
     }
 

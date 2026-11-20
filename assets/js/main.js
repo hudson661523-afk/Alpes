@@ -305,7 +305,7 @@
 })();
 
 /*
- * Quick booking: prepares a copyable trip summary on the visitor's device.
+ * Quick booking: prepares a copyable trip summary and opens a prefilled email.
  * No booking API is assumed and no field value is transmitted automatically.
  */
 (() => {
@@ -314,7 +314,7 @@
   const form = document.querySelector('[data-quick-booking]');
   if (!form) return;
 
-  const prepareButton = form.querySelector('[data-qb-prepare]');
+  const emailButton = form.querySelector('[data-qb-email]');
   const copyButton = form.querySelector('[data-qb-copy]');
   const summary = form.querySelector('[data-qb-summary]');
   const status = form.querySelector('[data-qb-status]');
@@ -322,7 +322,7 @@
   const waBase = form.getAttribute('data-whatsapp-base') || '';
   const dateInput = form.querySelector('#qb-date');
 
-  if (!prepareButton || !summary) return;
+  if (!emailButton || !summary) return;
 
   if (dateInput && !dateInput.min) {
     const now = new Date();
@@ -356,33 +356,47 @@
     ].join('\n');
   }
 
-  function prepare() {
-    if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
-
-    const text = buildSummary();
+  function prepareRecap(text) {
     summary.value = text;
 
     if (whatsapp && waBase) {
       whatsapp.href = waBase + '?text=' + encodeURIComponent(text);
     }
-    if (status) {
-      status.textContent = 'Récapitulatif prêt à copier ou à envoyer.';
-    }
-    summary.focus({ preventScroll: true });
   }
 
-  prepareButton.addEventListener('click', prepare);
+  function sendRequest(event) {
+    if (event && event.type === 'submit') event.preventDefault();
+
+    if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
+      if (event) event.preventDefault();
+      return false;
+    }
+
+    const text = buildSummary();
+    prepareRecap(text);
+
+    const emailBase = (emailButton.getAttribute('href') || '').split('?')[0];
+    const subject = 'Demande de trajet — Alpes Transport';
+    emailButton.href = emailBase + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
+
+    if (status) {
+      status.textContent = 'Votre messagerie va s’ouvrir. Si elle ne s’ouvre pas, copiez le récapitulatif ci-dessous.';
+    }
+    return true;
+  }
+
+  emailButton.addEventListener('click', sendRequest);
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    prepare();
+    emailButton.click();
   });
 
   if (copyButton) {
     copyButton.addEventListener('click', async () => {
       if (!summary.value.trim()) {
-        if (status) status.textContent = 'Préparez d’abord votre récapitulatif.';
-        prepareButton.focus();
+        if (status) status.textContent = 'Cliquez d’abord sur « Envoyer ma demande » pour préparer le récapitulatif.';
+        emailButton.focus();
         return;
       }
 

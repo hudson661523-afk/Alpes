@@ -110,10 +110,10 @@ $location = require __DIR__ . '/../lib/location-config.php';
                         Réserver en ligne
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
                     </a>
-                    <button class="btn quick-booking-prepare" type="button" data-qb-prepare>
-                        Préparer mon récapitulatif
+                    <a class="btn quick-booking-prepare" href="<?= e($config['email_href']) ?>" data-qb-email>
+                        Envoyer ma demande
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-                    </button>
+                    </a>
                 </div>
 
                 <div class="quick-booking-recap">
@@ -129,7 +129,7 @@ $location = require __DIR__ . '/../lib/location-config.php';
                     </div>
                 </div>
 
-                <p class="quick-booking-disclaimer">Les informations saisies restent sur votre appareil : aucun envoi, calcul de prix ou accusé de réception n’est effectué automatiquement. Sélectionner une suggestion enregistre ses données OpenStreetMap localement ; la saisie libre reste possible. Finalisez votre demande sur le site de réservation, par téléphone ou sur WhatsApp.</p>
+                <p class="quick-booking-disclaimer">Le bouton « Envoyer ma demande » ouvre votre messagerie avec un message prérempli : aucun envoi, calcul de prix ou accusé de réception n’est effectué automatiquement. Si votre messagerie ne s’ouvre pas, copiez le récapitulatif ci-dessus. Sélectionner une suggestion enregistre ses données OpenStreetMap localement ; la saisie libre reste possible. Vous pouvez aussi finaliser sur le site de réservation, par téléphone ou sur WhatsApp.</p>
             </form>
         </div>
     </div>

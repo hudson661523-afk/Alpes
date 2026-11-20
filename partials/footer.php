@@ -35,16 +35,15 @@ $socialIcons = [
         <div class="footer-grid">
             <div class="footer-column footer-brand-column">
                 <a class="brand" href="<?= e($config['home_url']) ?>">
-                    <span class="brand-mark" aria-hidden="true">
-                        <svg viewBox="0 0 70 50" fill="none" focusable="false">
-                            <path d="M4 43 24 14l11 15L46 5l20 38" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="m18 22 6-8 5 7M40 18l6-13 7 14" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </span>
-                    <span class="brand-text">
-                        <strong>ALPES TRANSPORT</strong>
-                        <small>CHAMONIX · MONT-BLANC</small>
-                    </span>
+                    <img
+                        class="brand-logo"
+                        src="<?= e(asset('images/logo-Alpes-Transport.png')) ?>"
+                        alt="Alpes Transport – Chauffeur privé à Chamonix-Mont-Blanc"
+                        width="904"
+                        height="225"
+                        loading="lazy"
+                        decoding="async"
+                    >
                 </a>
                 <p class="footer-description">À Chamonix-Mont-Blanc, Alpes Transport vous accompagne pour vos transferts aéroport, vos déplacements privés et vos trajets dans les Alpes, avec une attention personnalisée à chaque étape.</p>
                 <p class="footer-location">

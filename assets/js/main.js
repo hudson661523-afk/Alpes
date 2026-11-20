@@ -17,7 +17,6 @@
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let current = 0;
     let timer = null;
-    let hoverPaused = false;
     let interactionPaused = reducedMotion.matches;
     let changeToken = 0;
 
@@ -48,7 +47,7 @@
 
     function scheduleNext() {
       stopTimer();
-      if (interactionPaused || hoverPaused || reducedMotion.matches) return;
+      if (interactionPaused || reducedMotion.matches) return;
       hero.classList.remove('is-paused');
       timer = window.setTimeout(() => {
         goTo(current + 1, false);
@@ -107,14 +106,6 @@
       button.addEventListener('click', () => goTo(Number(button.dataset.slideTarget)));
     });
 
-    hero.addEventListener('mouseenter', () => {
-      hoverPaused = true;
-      stopTimer();
-    });
-    hero.addEventListener('mouseleave', () => {
-      hoverPaused = false;
-      scheduleNext();
-    });
     hero.addEventListener('focusin', (event) => {
       if (event.target.closest('.hero-controls')) pauseOnInteraction();
     });

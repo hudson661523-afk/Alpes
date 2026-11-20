@@ -80,6 +80,52 @@ $config = site_config();
             </div>
         </section>
 
+        <section class="why-choose-section" id="pourquoi-nous" aria-labelledby="pourquoi-nous-title">
+            <div class="container">
+                <div class="why-choose-heading">
+                    <div>
+                        <span class="section-kicker">POURQUOI NOUS CHOISIR</span>
+                        <h2 id="pourquoi-nous-title">Pourquoi choisir Alpes Transport à Chamonix&nbsp;?</h2>
+                    </div>
+                    <p>À Chamonix-Mont-Blanc, Alpes Transport organise vos déplacements privés sur réservation, avec une attention portée au confort de votre trajet et à vos besoins de voyage dans les Alpes.</p>
+                </div>
+
+                <div class="why-choose-grid">
+                    <article class="why-card">
+                        <span class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+                        </span>
+                        <h3>Transport privé sur réservation</h3>
+                        <p>Profitez d’un service de transport privé à Chamonix-Mont-Blanc pour vos trajets personnels ou professionnels, organisé sur réservation selon votre programme.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <span class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.6.6 0 0 0-.6.9L8 12l-2.2 2.2-2.4-.4a.6.6 0 0 0-.6 1l3 3 3 3a.6.6 0 0 0 1-.6l-.4-2.4L12 16l4.9 3.8a.6.6 0 0 0 .9-.6Z"/></svg>
+                        </span>
+                        <h3>Transferts aéroport</h3>
+                        <p>Depuis Chamonix, rejoignez les principaux aéroports de la région grâce à nos <a href="<?= e($config['services'][0]['url']) ?>">transferts aéroport</a> vers Genève, Lyon, Milan, Chambéry, Turin ou Zurich.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <span class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="m8 3 4 8 5-5 3 15H4z"/><path d="M4 21h16"/></svg>
+                        </span>
+                        <h3>Destinations alpines desservies</h3>
+                        <p>Vos déplacements vous mènent à Chamonix, vers les stations de ski et d’autres destinations des Alpes, pour vos séjours, loisirs ou rendez-vous.</p>
+                    </article>
+
+                    <article class="why-card">
+                        <span class="why-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+                        </span>
+                        <h3>Organisation adaptée à vos besoins</h3>
+                        <p>Chaque trajet est préparé selon vos horaires, votre lieu de prise en charge et vos besoins, afin de voyager avec plus de sérénité.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="intro" id="intro" aria-labelledby="intro-title">
             <div class="container intro-inner">
                 <div>

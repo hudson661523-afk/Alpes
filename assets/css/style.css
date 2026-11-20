@@ -1590,6 +1590,132 @@ p, h1, h2, h3 { margin-top: 0; }
 }
 
 /* ==========================================================================
+   Why choose Alpes Transport (homepage)
+   ========================================================================== */
+.why-choose-section {
+  position: relative;
+  padding: 112px 0 104px;
+  overflow: hidden;
+  background:
+    radial-gradient(820px 420px at 100% 0%, rgba(185,154,100,.12), transparent 58%),
+    radial-gradient(620px 320px at 0% 100%, rgba(21,25,28,.06), transparent 55%),
+    linear-gradient(180deg, #f3f0e8 0%, #eeeadf 100%);
+  color: var(--charcoal);
+}
+.why-choose-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 1px solid rgba(185,154,100,.24);
+}
+.why-choose-section .container { position: relative; z-index: 1; }
+.why-choose-heading {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.why-choose-heading .section-kicker { color: var(--gold-deep); }
+.why-choose-heading h2 {
+  margin: 20px 0 0;
+  color: var(--charcoal);
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+}
+.why-choose-heading > p {
+  max-width: 520px;
+  margin: 0 0 4px;
+  color: var(--slate-text);
+  font-size: 14px;
+  line-height: 1.95;
+}
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+.why-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 30px 26px 28px;
+  border-radius: 18px;
+  background: rgba(21,28,32,.62);
+  border: 1px solid rgba(185,154,100,.26);
+  box-shadow: 0 18px 38px rgba(21,25,28,.16);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .why-card { background: rgba(21,28,32,.92); }
+}
+.why-card:hover,
+.why-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(216,195,154,.5);
+  background: rgba(21,28,32,.7);
+  box-shadow: 0 24px 46px rgba(21,25,28,.22), 0 0 0 1px rgba(185,154,100,.08) inset;
+}
+.why-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  color: var(--gold-light);
+  border: 1px solid rgba(185,154,100,.34);
+  border-radius: 14px;
+  background: rgba(185,154,100,.12);
+}
+.why-card-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.why-card h3 {
+  margin: 0 0 12px;
+  color: var(--warm-white);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+.why-card p {
+  margin: 0;
+  flex: 1;
+  color: rgba(247,245,240,.78);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+.why-card p a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-decoration-color: rgba(216,195,154,.45);
+  text-underline-offset: 3px;
+  transition: color .2s var(--ease), text-decoration-color .2s var(--ease);
+}
+.why-card p a:hover,
+.why-card p a:focus-visible {
+  color: #fff;
+  text-decoration-color: var(--gold-light);
+}
+
+/* ==========================================================================
    Quick booking - OpenStreetMap location autocomplete
    ========================================================================== */
 .qb-place-field { position: relative; }
@@ -1833,7 +1959,8 @@ p, h1, h2, h3 { margin-top: 0; }
   }
 
   .intro-inner,
-  .services-heading { gap: 42px; }
+  .services-heading,
+  .why-choose-heading { gap: 42px; }
 
   .pre-footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .pre-footer-side p { max-width: 620px; }
@@ -1852,6 +1979,7 @@ p, h1, h2, h3 { margin-top: 0; }
   .hero-rail { display: none; }
   .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service-card:last-child { grid-column: 1 / -1; }
+  .why-choose-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 700px) {
@@ -1902,6 +2030,11 @@ p, h1, h2, h3 { margin-top: 0; }
   .services-grid { grid-template-columns: 1fr; gap: 18px; }
   .service-card:last-child { grid-column: auto; }
   .services-bottom { align-items: flex-start; flex-direction: column; gap: 18px; }
+
+  .why-choose-section { padding: 72px 0; }
+  .why-choose-heading { grid-template-columns: 1fr; gap: 24px; }
+  .why-choose-heading h2 { font-size: 40px; }
+  .why-choose-grid { grid-template-columns: 1fr; gap: 18px; }
 
   .pre-footer { padding: 72px 0; }
   .pre-footer h2 { margin-top: 20px; font-size: clamp(40px, 10vw, 58px); }

@@ -1101,6 +1101,7 @@ p, h1, h2, h3 { margin-top: 0; }
   gap: clamp(34px, 4.5vw, 74px);
 }
 .footer-column { min-width: 0; }
+.footer-brand-column .brand-mark { width: 52px; }
 .footer-description {
   max-width: 340px;
   margin: 28px 0 22px;

@@ -306,8 +306,7 @@
 
 /*
  * Quick booking: prepares a copyable trip summary on the visitor's device.
- * The booking link can also open a prefilled email request. No booking API is
- * assumed and no field value is transmitted automatically.
+ * Only the Book Online button submits a booking request to the secure endpoint.
  */
 (() => {
   'use strict';
@@ -321,8 +320,15 @@
   const summary = form.querySelector('[data-qb-summary]');
   const status = form.querySelector('[data-qb-status]');
   const whatsapp = form.querySelector('[data-qb-whatsapp]');
+  const csrfInput = form.querySelector('[data-qb-csrf]');
+  const honeypot = form.querySelector('[data-qb-honeypot]');
   const waBase = form.getAttribute('data-whatsapp-base') || '';
+  const endpoint = form.getAttribute('data-booking-endpoint') || '/api/booking-request.php';
   const dateInput = form.querySelector('#qb-date');
+  const sendingMessage = 'Envoi de votre demande...';
+  const successMessage = 'Votre demande a été envoyée. Notre équipe vous contactera pour confirmer la disponibilité.';
+  const failureMessage = "Votre demande n'a pas pu être envoyée. Veuillez réessayer.";
+  let submitting = false;
 
   if (!prepareButton || !summary) return;
 
@@ -336,6 +342,10 @@
   function fieldValue(id) {
     const field = form.querySelector('#' + id);
     return field ? field.value.trim() : '';
+  }
+
+  function setStatus(message) {
+    if (status) status.textContent = message;
   }
 
   function buildSummary() {
@@ -358,12 +368,6 @@
     ].join('\n');
   }
 
-  function buildEmailHref() {
-    const emailBase = (emailButton.getAttribute('href') || '').split('?')[0];
-    const subject = 'Demande de trajet — Alpes Transport';
-    return emailBase + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(buildSummary());
-  }
-
   function prepare() {
     if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
 
@@ -373,22 +377,66 @@
     if (whatsapp && waBase) {
       whatsapp.href = waBase + '?text=' + encodeURIComponent(text);
     }
-    if (status) {
-      status.textContent = 'Récapitulatif prêt à copier ou à envoyer.';
-    }
+    setStatus('Récapitulatif prêt à copier ou à envoyer.');
     summary.focus({ preventScroll: true });
+  }
+
+  async function submitBooking(event) {
+    event.preventDefault();
+    if (submitting) return;
+    if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
+
+    submitting = true;
+    emailButton.disabled = true;
+    emailButton.setAttribute('aria-busy', 'true');
+    setStatus(sendingMessage);
+
+    const payload = {
+      csrf_token: csrfInput ? csrfInput.value : '',
+      pickup: fieldValue('qb-pickup'),
+      destination: fieldValue('qb-destination'),
+      date: fieldValue('qb-date'),
+      time: fieldValue('qb-time'),
+      passengers: fieldValue('qb-passengers'),
+      website: honeypot ? honeypot.value : ''
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (parseError) {
+        result = null;
+      }
+
+      if (!response.ok || !result || result.ok !== true) {
+        throw new Error('Booking request rejected.');
+      }
+      setStatus(successMessage);
+    } catch (error) {
+      setStatus(failureMessage);
+    } finally {
+      submitting = false;
+      emailButton.disabled = false;
+      emailButton.removeAttribute('aria-busy');
+    }
   }
 
   prepareButton.addEventListener('click', prepare);
 
   if (emailButton) {
-    emailButton.addEventListener('click', (event) => {
-      if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
-        event.preventDefault();
-        return;
-      }
-      emailButton.href = buildEmailHref();
-    });
+    emailButton.addEventListener('click', submitBooking);
   }
 
   form.addEventListener('submit', (event) => {
@@ -399,7 +447,7 @@
   if (copyButton) {
     copyButton.addEventListener('click', async () => {
       if (!summary.value.trim()) {
-        if (status) status.textContent = 'Préparez d’abord votre récapitulatif.';
+        setStatus('Préparez d’abord votre récapitulatif.');
         prepareButton.focus();
         return;
       }
@@ -409,7 +457,7 @@
           throw new Error('Clipboard API unavailable');
         }
         await navigator.clipboard.writeText(summary.value);
-        if (status) status.textContent = 'Récapitulatif copié.';
+        setStatus('Récapitulatif copié.');
       } catch (error) {
         summary.focus();
         summary.select();
@@ -419,11 +467,7 @@
         } catch (fallbackError) {
           copied = false;
         }
-        if (status) {
-          status.textContent = copied
-            ? 'Récapitulatif copié.'
-            : 'Sélectionnez le texte pour le copier.';
-        }
+        setStatus(copied ? 'Récapitulatif copié.' : 'Sélectionnez le texte pour le copier.');
       }
     });
   }

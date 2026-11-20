@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/lib/helpers.php';
+require_once __DIR__ . '/lib/booking-security.php';
+alpes_booking_session();
 $config = site_config();
 ?>
 <!doctype html>

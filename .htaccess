@@ -17,6 +17,13 @@
   # Git-ignored local geocoder credentials must never be served directly.
   RewriteRule (?:^|/)location-key\.local\.php$ - [F,L]
 
+  # Private mail configuration must stay outside the web root. Deny it even
+  # if a copy is accidentally placed inside the deployment.
+  RewriteRule (?:^|/)alpes-transport-private(?:/|$) - [F,L]
+
+  # PHPMailer ships an OAuth helper that is not used by this site.
+  RewriteRule ^vendor/phpmailer/phpmailer/get_oauth_token\.php$ - [F,L]
+
   # Archives, database dumps, backups, temporary files and logs.
   RewriteRule \.(?:zip|tar|tar\.gz|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log)$ - [F,L]
 </IfModule>

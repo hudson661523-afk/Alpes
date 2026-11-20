@@ -37,6 +37,7 @@ $location = require __DIR__ . '/../lib/location-config.php';
         <div class="quick-booking-card">
             <form class="quick-booking-form"
                   data-quick-booking
+                  data-booking-endpoint="/api/booking-request.php"
                   data-whatsapp-base="<?= e($waBase) ?>"
                   data-location-provider="<?= e($location['provider']) ?>"
                   data-location-endpoint="<?= e($location['endpoint']) ?>"
@@ -44,6 +45,12 @@ $location = require __DIR__ . '/../lib/location-config.php';
                   data-location-language="<?= e($location['language']) ?>"
                   data-location-bias-lat="<?= e($location['bias_lat']) ?>"
                   data-location-bias-lon="<?= e($location['bias_lon']) ?>">
+                <input type="hidden" name="csrf_token" value="<?= e(alpes_booking_csrf_token()) ?>" data-qb-csrf>
+                <div class="sr-only" aria-hidden="true">
+                    <label for="qb-website">Ne pas remplir ce champ</label>
+                    <input id="qb-website" name="website" type="text" tabindex="-1" autocomplete="off" data-qb-honeypot>
+                </div>
+
                 <div class="quick-booking-card-head">
                     <span class="quick-booking-step">01 · VOTRE TRAJET</span>
                     <h3>Préparez votre déplacement</h3>
@@ -106,10 +113,10 @@ $location = require __DIR__ . '/../lib/location-config.php';
                 </p>
 
                 <div class="quick-booking-actions">
-                    <a class="btn btn-gold" href="<?= e($config['email_href']) ?>" data-qb-email>
+                    <button class="btn btn-gold" type="button" data-qb-email>
                         Réserver en ligne
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-                    </a>
+                    </button>
                     <button class="btn quick-booking-prepare" type="button" data-qb-prepare>
                         Préparer mon récapitulatif
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
@@ -129,7 +136,7 @@ $location = require __DIR__ . '/../lib/location-config.php';
                     </div>
                 </div>
 
-                <p class="quick-booking-disclaimer">Les informations saisies restent sur votre appareil : aucun envoi, calcul de prix ou accusé de réception n’est effectué automatiquement. Sélectionner une suggestion enregistre ses données OpenStreetMap localement ; la saisie libre reste possible. Finalisez votre demande sur le site de réservation, par téléphone ou sur WhatsApp.</p>
+                <p class="quick-booking-disclaimer">Votre demande est envoyée directement à notre équipe : aucun paiement, calcul de prix ou confirmation de réservation n’est effectué automatiquement. Sélectionner une suggestion enregistre ses données OpenStreetMap localement ; la saisie libre reste possible. Finalisez votre demande sur le site de réservation, par téléphone ou sur WhatsApp.</p>
             </form>
         </div>
     </div>

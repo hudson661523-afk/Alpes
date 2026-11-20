@@ -1,0 +1,8 @@
+{
+    "name": "alpes-transport/site",
+    "description": "Alpes Transport staging website with secure booking requests.",
+    "license": "proprietary",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

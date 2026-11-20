@@ -4,6 +4,7 @@ $today = date('Y-m-d');
 $waBase = $config['whatsapp'];
 $waDefault = $waBase . '?text=' . rawurlencode('Bonjour Alpes Transport, je souhaite organiser un trajet.');
 $airportsUrl = $config['services'][0]['url'];
+$location = require __DIR__ . '/../lib/location-config.php';
 ?>
 <section class="quick-booking" id="reservation" aria-labelledby="quick-booking-title">
     <div class="container quick-booking-inner">
@@ -34,21 +35,51 @@ $airportsUrl = $config['services'][0]['url'];
         </div>
 
         <div class="quick-booking-card">
-            <form class="quick-booking-form" data-quick-booking data-whatsapp-base="<?= e($waBase) ?>">
+            <form class="quick-booking-form"
+                  data-quick-booking
+                  data-whatsapp-base="<?= e($waBase) ?>"
+                  data-location-provider="<?= e($location['provider']) ?>"
+                  data-location-endpoint="<?= e($location['endpoint']) ?>"
+                  data-location-key="<?= e($location['key']) ?>"
+                  data-location-language="<?= e($location['language']) ?>"
+                  data-location-bias-lat="<?= e($location['bias_lat']) ?>"
+                  data-location-bias-lon="<?= e($location['bias_lon']) ?>">
                 <div class="quick-booking-card-head">
                     <span class="quick-booking-step">01 · VOTRE TRAJET</span>
                     <h3>Préparez votre déplacement</h3>
                 </div>
 
                 <div class="quick-booking-grid">
-                    <div class="quick-booking-field">
+                    <div class="quick-booking-field qb-place-field" data-qb-place-field="pickup">
                         <label for="qb-pickup">Lieu de prise en charge</label>
-                        <input id="qb-pickup" name="pickup" type="text" required autocomplete="off" placeholder="Ex. Aéroport de Genève, Chamonix centre…">
+                        <div class="qb-place-input-wrap">
+                            <svg class="qb-place-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="currentColor"/></svg>
+                            <input id="qb-pickup" name="pickup" type="text" required autocomplete="off" placeholder="Ex. Aéroport de Genève, Chamonix centre…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qb-pickup-suggestions" aria-haspopup="listbox">
+                            <button class="qb-place-clear" type="button" data-qb-place-clear aria-label="Effacer le lieu de prise en charge" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+                            <div class="qb-suggestions" id="qb-pickup-suggestions" data-qb-suggestions role="listbox" aria-label="Suggestions de lieux de prise en charge" hidden></div>
+                        </div>
+                        <input type="hidden" name="pickup_location_name" data-qb-location-name>
+                        <input type="hidden" name="pickup_location_description" data-qb-location-description>
+                        <input type="hidden" name="pickup_lat" data-qb-lat>
+                        <input type="hidden" name="pickup_lon" data-qb-lon>
+                        <input type="hidden" name="pickup_osm_id" data-qb-osm-id>
+                        <span class="qb-place-status" data-qb-place-status role="status" aria-live="polite"></span>
                     </div>
 
-                    <div class="quick-booking-field">
+                    <div class="quick-booking-field qb-place-field" data-qb-place-field="destination">
                         <label for="qb-destination">Destination</label>
-                        <input id="qb-destination" name="destination" type="text" required autocomplete="off" placeholder="Ex. Chamonix-Mont-Blanc, Megève…">
+                        <div class="qb-place-input-wrap">
+                            <svg class="qb-place-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" fill="currentColor"/></svg>
+                            <input id="qb-destination" name="destination" type="text" required autocomplete="off" placeholder="Ex. Chamonix-Mont-Blanc, Megève…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qb-destination-suggestions" aria-haspopup="listbox">
+                            <button class="qb-place-clear" type="button" data-qb-place-clear aria-label="Effacer la destination" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+                            <div class="qb-suggestions" id="qb-destination-suggestions" data-qb-suggestions role="listbox" aria-label="Suggestions de destinations" hidden></div>
+                        </div>
+                        <input type="hidden" name="destination_location_name" data-qb-location-name>
+                        <input type="hidden" name="destination_location_description" data-qb-location-description>
+                        <input type="hidden" name="destination_lat" data-qb-lat>
+                        <input type="hidden" name="destination_lon" data-qb-lon>
+                        <input type="hidden" name="destination_osm_id" data-qb-osm-id>
+                        <span class="qb-place-status" data-qb-place-status role="status" aria-live="polite"></span>
                     </div>
 
                     <div class="quick-booking-field">
@@ -66,6 +97,13 @@ $airportsUrl = $config['services'][0]['url'];
                         <input id="qb-passengers" name="passengers" type="number" min="1" step="1" value="1" required inputmode="numeric">
                     </div>
                 </div>
+
+                <p class="qb-geocoder-attribution">
+                    Recherche de lieux : <span data-qb-provider-label>Photon</span> · Données ©
+                    <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">contributeurs OpenStreetMap</a>
+                    — <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer">ODbL</a>.
+                    <a href="https://photon.komoot.io/" target="_blank" rel="noopener noreferrer" data-qb-provider-link>En savoir plus</a>.
+                </p>
 
                 <div class="quick-booking-actions">
                     <a class="btn btn-gold" href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer">
@@ -91,7 +129,7 @@ $airportsUrl = $config['services'][0]['url'];
                     </div>
                 </div>
 
-                <p class="quick-booking-disclaimer">Les informations saisies restent sur votre appareil : aucun envoi, calcul de prix ou accusé de réception n’est effectué automatiquement. Finalisez votre demande sur le site de réservation, par téléphone ou sur WhatsApp.</p>
+                <p class="quick-booking-disclaimer">Les informations saisies restent sur votre appareil : aucun envoi, calcul de prix ou accusé de réception n’est effectué automatiquement. Sélectionner une suggestion enregistre ses données OpenStreetMap localement ; la saisie libre reste possible. Finalisez votre demande sur le site de réservation, par téléphone ou sur WhatsApp.</p>
             </form>
         </div>
     </div>

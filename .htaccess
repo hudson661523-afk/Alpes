@@ -14,11 +14,14 @@
   RewriteRule (?:^|/)(?:credentials|secrets|token)\.[^/]+$ - [F,L]
   RewriteRule (?:^|/)auth\.json$ - [F,L]
 
+  # Git-ignored local geocoder credentials must never be served directly.
+  RewriteRule (?:^|/)location-key\.local\.php$ - [F,L]
+
   # Archives, database dumps, backups, temporary files and logs.
   RewriteRule \.(?:zip|tar|tar\.gz|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log)$ - [F,L]
 </IfModule>
 
-<FilesMatch "^(AGENTS\.md|\.env(?:\..*)?|credentials\..*|secrets\..*|token\..*|auth\.json|\.htpasswd|\.netrc|\.git-credentials|.*\.(?:zip|tar|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log))$">
+<FilesMatch "^(AGENTS\.md|\.env(?:\..*)?|credentials\..*|secrets\..*|token\..*|auth\.json|location-key\.local\.php|\.htpasswd|\.netrc|\.git-credentials|.*\.(?:zip|tar|tgz|rar|7z|sql|gz|bz2|xz|bak|backup|old|orig|rej|tmp|temp|swp|swo|log))$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>

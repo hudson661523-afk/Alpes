@@ -410,3 +410,4 @@
     });
   }
 })();
+/* Location autocomplete is provided by location-providers.js and location-autocomplete.js. */

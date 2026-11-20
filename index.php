@@ -40,40 +40,52 @@ $config = site_config();
                 </div>
 
                 <div class="services-grid">
-                    <article class="service-card service-card-airport">
-                        <div class="service-card-image" role="img" aria-label="Route alpine au cœur des montagnes"></div>
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-hero-valley.webp')) ?>" alt="Vallée alpine près de Chamonix, illustrant les transferts aéroport" width="1672" height="941" loading="lazy" decoding="async">
+                        </div>
                         <div class="service-card-content">
-                            <span class="service-number">01 / TRANSFERTS</span>
-                            <h3>Transferts aéroport</h3>
-                            <p>Rejoignez Chamonix et les destinations alpines depuis votre aéroport d’arrivée, avec un trajet organisé selon votre programme.</p>
-                            <a href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer" class="service-link">Organiser mon transfert <span aria-hidden="true">↗</span></a>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M17.8 19.2 16 11l3.5-3.5a2.12 2.12 0 0 0-3-3L13 8 4.8 6.2a.6.6 0 0 0-.6.9L8 12l-2.2 2.2-2.4-.4a.6.6 0 0 0-.6 1l3 3 3 3a.6.6 0 0 0 1-.6l-.4-2.4L12 16l4.9 3.8a.6.6 0 0 0 .9-.6Z"/></svg>
+                            </span>
+                            <h3>Transferts Aéroport</h3>
+                            <p>Rejoignez Chamonix-Mont-Blanc depuis Genève, Lyon ou les aéroports voisins avec un trajet organisé selon votre programme.</p>
+                            <a href="<?= e($config['services'][0]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
-                    <article class="service-card service-card-chauffeur">
-                        <div class="service-card-image" role="img" aria-label="Paysage de montagne dans les Alpes"></div>
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-hero-mercedes-s-class.webp')) ?>" alt="Berline de prestige pour un chauffeur privé à Chamonix" width="1672" height="941" loading="lazy" decoding="async">
+                        </div>
                         <div class="service-card-content">
-                            <span class="service-number">02 / SUR MESURE</span>
-                            <h3>Chauffeur privé</h3>
-                            <p>Pour vos rendez-vous, vos sorties ou vos déplacements personnels, bénéficiez d’un service privé adapté à vos besoins.</p>
-                            <a href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer" class="service-link">Réserver un chauffeur <span aria-hidden="true">↗</span></a>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/><path d="M4 12h2m12 0h2"/></svg>
+                            </span>
+                            <h3>Chauffeur Privé</h3>
+                            <p>Vos déplacements personnels et professionnels à Chamonix et dans les Alpes, avec la discrétion d’un service sur mesure.</p>
+                            <a href="<?= e($config['services'][1]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
-                    <article class="service-card service-card-alps">
-                        <div class="service-card-image" role="img" aria-label="Route panoramique dans les montagnes"></div>
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-hero-mountains.webp')) ?>" alt="Panorama des montagnes alpines pour un service touristique au départ de Chamonix" width="1672" height="941" loading="lazy" decoding="async">
+                        </div>
                         <div class="service-card-content">
-                            <span class="service-number">03 / DÉCOUVERTE</span>
-                            <h3>Déplacements dans les Alpes</h3>
-                            <p>Parcourez Chamonix et les environs en toute sérénité, que votre déplacement soit professionnel ou lié à vos vacances.</p>
-                            <a href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer" class="service-link">Planifier mon trajet <span aria-hidden="true">↗</span></a>
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="m8 3 4 8 5-5 3 15H4z"/><path d="M4 21h16"/></svg>
+                            </span>
+                            <h3>Service Touristique</h3>
+                            <p>Découvrez Chamonix, Megève, Annecy ou Courmayeur lors d’excursions privées au rythme de vos envies dans les Alpes.</p>
+                            <a href="<?= e($config['services'][3]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
                 </div>
 
                 <div class="services-bottom">
                     <span>Un trajet à organiser ?</span>
-                    <a class="btn btn-dark" href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer">Réserver votre trajet <span aria-hidden="true">↗</span></a>
+                    <a class="btn btn-gold" href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer">Réserver votre trajet <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                 </div>
             </div>
         </section>

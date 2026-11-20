@@ -682,6 +682,11 @@ p, h1, h2, h3 { margin-top: 0; }
   backdrop-filter: blur(12px);
   transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease);
 }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .service-card {
+    background: rgba(21,28,32,.9);
+  }
+}
 .service-card:hover {
   transform: translateY(-6px);
   border-color: rgba(216,195,154,.42);
@@ -1897,7 +1902,6 @@ p, h1, h2, h3 { margin-top: 0; }
   .services-grid { grid-template-columns: 1fr; gap: 18px; }
   .service-card:last-child { grid-column: auto; }
   .services-bottom { align-items: flex-start; flex-direction: column; gap: 18px; }
-  .services-bottom { align-items: flex-start; flex-direction: column; }
 
   .pre-footer { padding: 72px 0; }
   .pre-footer h2 { margin-top: 20px; font-size: clamp(40px, 10vw, 58px); }

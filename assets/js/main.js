@@ -648,3 +648,60 @@
   updatePagination();
   refresh();
 })();
+
+(() => {
+  'use strict';
+
+  const accordion = document.querySelector('[data-faq-accordion]');
+  if (!accordion) return;
+
+  const items = Array.from(accordion.querySelectorAll('.faq-item'));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function closeItem(item) {
+    const btn = item.querySelector('.faq-toggle');
+    const panel = item.querySelector('.faq-panel');
+    if (!btn || !panel) return;
+    item.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+    if (reducedMotion.matches) {
+      panel.hidden = true;
+      return;
+    }
+    panel.addEventListener('transitionend', function handler(e) {
+      if (e.propertyName !== 'grid-template-rows') return;
+      if (!item.classList.contains('is-open')) panel.hidden = true;
+      panel.removeEventListener('transitionend', handler);
+    });
+  }
+
+  function openItem(item) {
+    const btn = item.querySelector('.faq-toggle');
+    const panel = item.querySelector('.faq-panel');
+    if (!btn || !panel) return;
+    panel.hidden = false;
+    // force reflow for transition when opening from hidden
+    panel.offsetHeight; // eslint-disable-line no-unused-expressions
+    item.classList.add('is-open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+
+  items.forEach((item) => {
+    const btn = item.querySelector('.faq-toggle');
+    const panel = item.querySelector('.faq-panel');
+    if (!btn || !panel) return;
+
+    const isOpen = item.classList.contains('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    panel.hidden = !isOpen;
+
+    btn.addEventListener('click', () => {
+      const open = item.classList.contains('is-open');
+      if (open) {
+        closeItem(item);
+      } else {
+        openItem(item);
+      }
+    });
+  });
+})();

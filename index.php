@@ -393,6 +393,164 @@ $config = site_config();
             </div>
         </section>
 
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="faq-heading">
+                    <div>
+                        <span class="section-kicker">QUESTIONS FRÉQUENTES</span>
+                        <h2 id="faq-title">Tout savoir avant votre départ</h2>
+                    </div>
+                    <p>Retrouvez ici les réponses essentielles pour organiser votre taxi à Chamonix, un transfert aéroport ou un trajet avec chauffeur privé dans les Alpes, en toute sérénité.</p>
+                </div>
+
+                <div class="faq-grid" data-faq-accordion>
+                    <div class="faq-column">
+                        <article class="faq-item is-open">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-1" aria-expanded="true" aria-controls="faq-panel-1">
+                                    <span class="faq-question-text">Comment réserver un taxi à Chamonix ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-toggle-1">
+                                <div class="faq-panel-inner">
+                                    <p>Pour réserver un taxi à Chamonix, vous pouvez préparer votre demande depuis le formulaire de réservation de la page d’accueil, puis finaliser par téléphone, WhatsApp ou via la <a href="https://alpestransport.fr/reserver-en-ligne/">page de réservation en ligne</a>. Indiquez votre lieu de prise en charge, votre destination, la date, l’heure et le nombre de passagers afin que l’équipe Alpes Transport puisse organiser votre trajet.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-2" aria-expanded="false" aria-controls="faq-panel-2">
+                                    <span class="faq-question-text">Quels aéroports desservez-vous ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-toggle-2" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Alpes Transport propose des transferts aéroport à Chamonix vers les principaux aéroports de la région, notamment Genève, Lyon, Chambéry, Milan, Turin et Zurich. Pour choisir l’itinéraire adapté, consultez notre page <a href="https://alpestransport.fr/transferts-aeroport/">Transferts Aéroport</a>.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-3" aria-expanded="false" aria-controls="faq-panel-3">
+                                    <span class="faq-question-text">Proposez-vous des transferts vers les stations de ski ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-toggle-3" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Oui, Alpes Transport assure des transferts privés vers les stations de ski et destinations alpines depuis Chamonix-Mont-Blanc, selon votre itinéraire. Lors de votre demande, précisez votre destination, vos horaires et le nombre de passagers pour organiser un trajet confortable avec un <a href="https://alpestransport.fr/service-de-chauffeur-prive/">chauffeur privé à Chamonix</a>.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-4" aria-expanded="false" aria-controls="faq-panel-4">
+                                    <span class="faq-question-text">Quels véhicules sont disponibles ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-toggle-4" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>La flotte présentée sur le site comprend la Mercedes Classe S (3 passagers, 2 bagages), le Renault Trafic Van (8 passagers, 8 bagages) et la Mercedes Classe V (7 passagers, 6 bagages). Le choix du véhicule dépend de votre nombre de passagers, de vos bagages et du type de trajet souhaité.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-5" aria-expanded="false" aria-controls="faq-panel-5">
+                                    <span class="faq-question-text">Puis-je voyager avec mes bagages et mon matériel de ski ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-toggle-5" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Oui, vous pouvez voyager avec vos bagages, et il est recommandé d’indiquer à l’avance la présence de matériel de ski ou d’équipements volumineux. Cela permet de prévoir le véhicule le plus adapté, comme le Renault Trafic Van ou la Mercedes Classe V, selon la capacité nécessaire.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="faq-column">
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-6" aria-expanded="false" aria-controls="faq-panel-6">
+                                    <span class="faq-question-text">Proposez-vous des transferts vers la Suisse et l’Italie ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-toggle-6" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Oui, Alpes Transport propose des trajets privés depuis Chamonix vers des destinations en Suisse et en Italie, notamment Genève, Zurich, Milan ou Turin. Vous pouvez consulter les <a href="https://alpestransport.fr/nos-services/">services de transport privé</a> pour identifier la prestation la plus adaptée à votre déplacement.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-7" aria-expanded="false" aria-controls="faq-panel-7">
+                                    <span class="faq-question-text">Comment connaître le prix de mon trajet ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-7" role="region" aria-labelledby="faq-toggle-7" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Pour connaître le prix de votre trajet, le plus simple est de transmettre les détails de votre demande : lieu de départ, destination, date, heure, nombre de passagers et bagages. Vous pouvez faire une demande via la <a href="https://alpestransport.fr/reserver-en-ligne/">réservation en ligne</a>, par téléphone ou par WhatsApp pour recevoir une réponse adaptée à votre itinéraire.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-8" aria-expanded="false" aria-controls="faq-panel-8">
+                                    <span class="faq-question-text">Puis-je réserver un chauffeur privé pour un déplacement professionnel ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-8" role="region" aria-labelledby="faq-toggle-8" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Oui, vous pouvez réserver un chauffeur privé à Chamonix pour un déplacement professionnel, un rendez-vous ou un transfert lié à votre activité. Alpes Transport propose un service discret et confortable, à organiser selon votre programme via la page <a href="https://alpestransport.fr/voyages-daffaires/">Voyages d’Affaires</a>.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-9" aria-expanded="false" aria-controls="faq-panel-9">
+                                    <span class="faq-question-text">Proposez-vous des transferts pour les familles et les groupes ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-9" role="region" aria-labelledby="faq-toggle-9" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Oui, Alpes Transport propose des transferts adaptés aux familles et aux groupes, avec des véhicules comme la Mercedes Classe V (7 passagers, 6 bagages) ou le Renault Trafic Van (8 passagers, 8 bagages). Indiquez la composition de votre groupe et vos bagages pour préparer le <a href="https://alpestransport.fr/transferts-aeroport/">transfert aéroport</a> ou le trajet privé le plus adapté.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="faq-item">
+                            <h3 class="faq-question">
+                                <button type="button" class="faq-toggle" id="faq-toggle-10" aria-expanded="false" aria-controls="faq-panel-10">
+                                    <span class="faq-question-text">Comment organiser un transfert depuis l'aéroport de Genève vers Chamonix ?</span>
+                                    <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
+                                </button>
+                            </h3>
+                            <div class="faq-panel" id="faq-panel-10" role="region" aria-labelledby="faq-toggle-10" hidden>
+                                <div class="faq-panel-inner">
+                                    <p>Pour organiser un transfert depuis l’aéroport de Genève vers Chamonix, communiquez votre horaire d’arrivée, le nombre de passagers, vos bagages et votre adresse à Chamonix. Vous pouvez préparer votre demande en ligne puis la finaliser avec l’équipe Alpes Transport, et consulter la page dédiée au <a href="https://alpestransport.fr/transfert-geneve-chamonix/">transfert Genève – Chamonix</a> pour plus d’informations.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="intro" id="intro" aria-labelledby="intro-title">
             <div class="container intro-inner">
                 <div>

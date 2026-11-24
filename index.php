@@ -139,7 +139,7 @@ $config = site_config();
                 <div class="fleet-grid">
                     <article class="fleet-card">
                         <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-mercedes-s-class.png')) ?>" alt="Mercedes Classe S noire pour vos déplacements privés à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-fleet-mercedes-s-class.webp')) ?>" alt="Mercedes Classe S noire pour vos déplacements privés à Chamonix" width="1122" height="1402" loading="lazy" decoding="async">
                         </div>
                         <div class="fleet-card-body">
                             <h3>Mercedes Classe S</h3>
@@ -162,7 +162,7 @@ $config = site_config();
 
                     <article class="fleet-card">
                         <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-renault-trafic.png')) ?>" alt="Renault Trafic noir pour les transferts de groupe à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-fleet-renault-trafic.webp')) ?>" alt="Renault Trafic noir pour les transferts de groupe à Chamonix" width="1122" height="1402" loading="lazy" decoding="async">
                         </div>
                         <div class="fleet-card-body">
                             <h3>Renault Trafic Van</h3>
@@ -185,7 +185,7 @@ $config = site_config();
 
                     <article class="fleet-card">
                         <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-mercedes-v-class.png')) ?>" alt="Mercedes Classe V noire pour les transferts privés dans les Alpes" width="1402" height="1122" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-fleet-mercedes-v-class.webp')) ?>" alt="Mercedes Classe V noire pour les transferts privés dans les Alpes" width="1122" height="1402" loading="lazy" decoding="async">
                         </div>
                         <div class="fleet-card-body">
                             <h3>Mercedes Classe V</h3>

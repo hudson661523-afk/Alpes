@@ -126,6 +126,90 @@ $config = site_config();
             </div>
         </section>
 
+        <section class="fleet-section" id="flotte" aria-labelledby="fleet-title">
+            <div class="container">
+                <div class="fleet-heading">
+                    <div>
+                        <span class="section-kicker">NOTRE FLOTTE</span>
+                        <h2 id="fleet-title">Des véhicules adaptés à chacun de vos trajets</h2>
+                    </div>
+                    <p>Pour vos transferts, déplacements professionnels ou séjours dans les Alpes, Alpes Transport met à disposition des véhicules confortables, adaptés au nombre de passagers et à vos bagages.</p>
+                </div>
+
+                <div class="fleet-grid">
+                    <article class="fleet-card">
+                        <div class="fleet-card-media">
+                            <img src="<?= e(asset('images/alpes-fleet-mercedes-s-class.webp')) ?>" alt="Mercedes Classe S noire pour vos déplacements privés à Chamonix" width="1122" height="1402" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fleet-card-body">
+                            <h3>Mercedes Classe S</h3>
+                            <p>Berline d’exception, la Mercedes Classe S offre un confort raffiné pour les clients VIP et les déplacements professionnels au départ de Chamonix.</p>
+                            <ul class="fleet-specs" aria-label="Capacités Mercedes Classe S">
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                    <span class="fleet-spec-label">Passagers</span>
+                                    <strong class="fleet-spec-value">3</strong>
+                                </li>
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                    <span class="fleet-spec-label">Bagages</span>
+                                    <strong class="fleet-spec-value">2</strong>
+                                </li>
+                            </ul>
+                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                        </div>
+                    </article>
+
+                    <article class="fleet-card">
+                        <div class="fleet-card-media">
+                            <img src="<?= e(asset('images/alpes-fleet-renault-trafic.webp')) ?>" alt="Renault Trafic noir pour les transferts de groupe à Chamonix" width="1122" height="1402" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fleet-card-body">
+                            <h3>Renault Trafic Van</h3>
+                            <p>Spacieux et pratique, le Renault Trafic Van convient aux transferts aéroport, aux voyages en groupe et aux déplacements avec bagages depuis Chamonix.</p>
+                            <ul class="fleet-specs" aria-label="Capacités Renault Trafic Van">
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                    <span class="fleet-spec-label">Passagers</span>
+                                    <strong class="fleet-spec-value">8</strong>
+                                </li>
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                    <span class="fleet-spec-label">Bagages</span>
+                                    <strong class="fleet-spec-value">8</strong>
+                                </li>
+                            </ul>
+                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                        </div>
+                    </article>
+
+                    <article class="fleet-card">
+                        <div class="fleet-card-media">
+                            <img src="<?= e(asset('images/alpes-fleet-mercedes-v-class.webp')) ?>" alt="Mercedes Classe V noire pour les transferts privés dans les Alpes" width="1122" height="1402" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fleet-card-body">
+                            <h3>Mercedes Classe V</h3>
+                            <p>Avec son espace généreux et son confort premium, la Mercedes Classe V est idéale pour les familles, les groupes et les séjours au ski dans les Alpes.</p>
+                            <ul class="fleet-specs" aria-label="Capacités Mercedes Classe V">
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                    <span class="fleet-spec-label">Passagers</span>
+                                    <strong class="fleet-spec-value">7</strong>
+                                </li>
+                                <li>
+                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                    <span class="fleet-spec-label">Bagages</span>
+                                    <strong class="fleet-spec-value">6</strong>
+                                </li>
+                            </ul>
+                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                        </div>
+                    </article>
+                </div>
+                <p class="fleet-visual-note">Visuels illustratifs des modèles de véhicules.</p>
+            </div>
+        </section>
+
         <section class="intro" id="intro" aria-labelledby="intro-title">
             <div class="container intro-inner">
                 <div>
@@ -137,7 +221,6 @@ $config = site_config();
         </section>
 
         <section class="sr-only" id="apropos" aria-label="À propos — section en préparation"></section>
-        <section class="sr-only" id="flotte" aria-label="Flotte — section en préparation"></section>
         <section class="sr-only" id="contact" aria-label="Contact — section en préparation"></section>
     </main>
 

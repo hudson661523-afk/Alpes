@@ -1716,6 +1716,198 @@ p, h1, h2, h3 { margin-top: 0; }
 }
 
 /* ==========================================================================
+   Fleet (homepage)
+   ========================================================================== */
+.fleet-section {
+  position: relative;
+  padding: 112px 0 104px;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 10% 0%, rgba(185,154,100,.12), transparent 60%),
+    radial-gradient(700px 360px at 90% 100%, rgba(86,120,140,.14), transparent 55%),
+    linear-gradient(180deg, #131a1f 0%, #0f1519 100%);
+  color: var(--warm-white);
+}
+.fleet-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 1px solid rgba(185,154,100,.18);
+}
+.fleet-section .container { position: relative; z-index: 1; }
+.fleet-heading {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.fleet-heading .section-kicker { color: var(--gold-light); }
+.fleet-heading h2 {
+  margin: 20px 0 0;
+  color: var(--warm-white);
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+}
+.fleet-heading > p {
+  max-width: 540px;
+  margin: 0 0 4px;
+  color: rgba(247,245,240,.76);
+  font-size: 14px;
+  line-height: 1.95;
+}
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.fleet-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(21,28,32,.54);
+  border: 1px solid rgba(185,154,100,.22);
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .fleet-card { background: rgba(21,28,32,.92); }
+}
+.fleet-card:hover,
+.fleet-card:focus-within {
+  transform: translateY(-6px);
+  border-color: rgba(216,195,154,.44);
+  background: rgba(28,36,41,.6);
+  box-shadow: 0 24px 52px rgba(0,0,0,.34), 0 0 0 1px rgba(185,154,100,.08) inset;
+}
+.fleet-card-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px;
+  min-height: 300px;
+  background:
+    radial-gradient(120% 90% at 50% 20%, rgba(255,255,255,.98) 0%, rgba(240,235,225,.96) 55%, rgba(225,217,203,.94) 100%);
+  border-bottom: 1px solid rgba(185,154,100,.18);
+}
+.fleet-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255,255,255,.12), transparent 35%, rgba(185,154,100,.06));
+}
+.fleet-card-media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(21,25,28,.18));
+  transition: transform .5s var(--ease);
+}
+.fleet-card:hover .fleet-card-media img { transform: scale(1.02); }
+.fleet-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px 26px 30px;
+}
+.fleet-card h3 {
+  margin: 0 0 12px;
+  color: var(--warm-white);
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+.fleet-card p {
+  margin: 0 0 24px;
+  color: rgba(247,245,240,.74);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+.fleet-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: auto 0 26px;
+  padding: 0;
+  list-style: none;
+}
+.fleet-specs li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border: 1px solid rgba(185,154,100,.2);
+  border-radius: 12px;
+  background: rgba(255,255,255,.03);
+}
+.fleet-spec-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--gold-light);
+  border-radius: 8px;
+  background: rgba(185,154,100,.1);
+}
+.fleet-spec-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fleet-spec-label {
+  color: rgba(247,245,240,.66);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.fleet-spec-value {
+  color: var(--warm-white);
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+.fleet-card-cta {
+  width: 100%;
+  margin-top: auto;
+  min-height: 50px;
+}
+.fleet-visual-note {
+  margin: 22px 0 0;
+  color: rgba(247,245,240,.5);
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+/* ==========================================================================
    Quick booking - OpenStreetMap location autocomplete
    ========================================================================== */
 .qb-place-field { position: relative; }
@@ -1960,7 +2152,8 @@ p, h1, h2, h3 { margin-top: 0; }
 
   .intro-inner,
   .services-heading,
-  .why-choose-heading { gap: 42px; }
+  .why-choose-heading,
+  .fleet-heading { gap: 42px; }
 
   .pre-footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .pre-footer-side p { max-width: 620px; }
@@ -1980,6 +2173,8 @@ p, h1, h2, h3 { margin-top: 0; }
   .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .service-card:last-child { grid-column: 1 / -1; }
   .why-choose-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fleet-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fleet-card:last-child { grid-column: 1 / -1; max-width: min(100%, 560px); justify-self: center; width: 100%; }
 }
 
 @media (max-width: 700px) {
@@ -2035,6 +2230,20 @@ p, h1, h2, h3 { margin-top: 0; }
   .why-choose-heading { grid-template-columns: 1fr; gap: 24px; }
   .why-choose-heading h2 { font-size: 40px; }
   .why-choose-grid { grid-template-columns: 1fr; gap: 18px; }
+
+  .fleet-section { padding: 72px 0; }
+  .fleet-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 34px; }
+  .fleet-heading h2 { font-size: 40px; }
+  .fleet-heading > p { font-size: 14px; line-height: 1.85; }
+  .fleet-grid { grid-template-columns: 1fr; gap: 18px; }
+  .fleet-card:last-child { grid-column: auto; max-width: none; }
+  .fleet-card-media { min-height: 240px; padding: 22px 18px; }
+  .fleet-card-media img { max-height: 280px; }
+  .fleet-card-body { padding: 24px 20px 24px; }
+  .fleet-card h3 { font-size: 28px; }
+  .fleet-specs { gap: 10px; margin-bottom: 22px; }
+  .fleet-specs li { padding: 10px; }
+  .fleet-visual-note { text-align: left; margin-top: 18px; }
 
   .pre-footer { padding: 72px 0; }
   .pre-footer h2 { margin-top: 20px; font-size: clamp(40px, 10vw, 58px); }

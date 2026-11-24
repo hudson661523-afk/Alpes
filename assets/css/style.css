@@ -2268,6 +2268,110 @@ p, h1, h2, h3 { margin-top: 0; }
 }
 
 /* ==========================================================================
+   Final CTA (homepage)
+   ========================================================================== */
+.final-cta {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 96px 0;
+  overflow: hidden;
+  background: #0d1216;
+  color: var(--warm-white);
+  isolation: isolate;
+}
+.final-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.final-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+  display: block;
+}
+.final-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10,14,17,.88) 0%, rgba(10,14,17,.72) 34%, rgba(10,14,17,.42) 58%, rgba(10,14,17,.18) 100%),
+    linear-gradient(180deg, rgba(10,14,17,.18) 0%, rgba(10,14,17,.08) 40%, rgba(10,14,17,.34) 100%);
+}
+.final-cta-inner { position: relative; z-index: 1; width: 100%; }
+.final-cta-content { max-width: 640px; }
+.final-cta-kicker { color: var(--gold-light); margin-bottom: 20px; }
+.final-cta-content h2 {
+  margin: 0 0 22px;
+  color: var(--warm-white);
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 4.6vw, 62px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.final-cta-text {
+  margin: 0 0 34px;
+  max-width: 560px;
+  color: rgba(247,245,240,.84);
+  font-size: 15px;
+  line-height: 1.95;
+}
+.final-cta-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.final-cta-btn {
+  min-width: 210px;
+  padding: 16px 28px;
+}
+.final-cta-btn svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.final-cta-btn-secondary {
+  background: rgba(255,255,255,.04);
+  color: var(--warm-white);
+  border-color: rgba(247,245,240,.3);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.final-cta-btn-secondary:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(216,195,154,.55);
+  color: var(--gold-light);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .final-cta-btn-secondary { background: rgba(21,28,32,.72); }
+}
+@media (max-width: 1100px) {
+  .final-cta { min-height: 480px; }
+  .final-cta-bg img { object-position: 68% center; }
+}
+@media (max-width: 900px) {
+  .final-cta { padding: 84px 0; min-height: 460px; }
+  .final-cta-content { max-width: 560px; }
+  .final-cta-overlay {
+    background:
+      linear-gradient(90deg, rgba(10,14,17,.84) 0%, rgba(10,14,17,.68) 45%, rgba(10,14,17,.34) 100%),
+      linear-gradient(180deg, rgba(10,14,17,.12) 0%, rgba(10,14,17,.3) 100%);
+  }
+}
+@media (max-width: 700px) {
+  .final-cta { min-height: 0; padding: 72px 0; }
+  .final-cta-bg img { object-position: 72% center; }
+  .final-cta-overlay {
+    background:
+      linear-gradient(180deg, rgba(10,14,17,.5) 0%, rgba(10,14,17,.72) 45%, rgba(10,14,17,.86) 100%),
+      linear-gradient(90deg, rgba(10,14,17,.7) 0%, rgba(10,14,17,.32) 100%);
+  }
+  .final-cta-content h2 { font-size: 40px; }
+  .final-cta-text { font-size: 14px; line-height: 1.85; margin-bottom: 28px; }
+  .final-cta-actions { flex-direction: column; align-items: stretch; }
+  .final-cta-btn { width: 100%; min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .final-cta-btn, .final-cta-btn-secondary { transition: none; }
+}
+
+/* ==========================================================================
    Quick booking - OpenStreetMap location autocomplete
    ========================================================================== */
 .qb-place-field { position: relative; }

@@ -551,13 +551,27 @@ $config = site_config();
             </div>
         </section>
 
-        <section class="intro" id="intro" aria-labelledby="intro-title">
-            <div class="container intro-inner">
-                <div>
-                    <span class="section-kicker">L’ART DU DÉPLACEMENT</span>
-                    <h2 id="intro-title">Votre voyage, <em>notre attention.</em></h2>
+        <section class="final-cta" id="contact-cta" aria-labelledby="final-cta-title">
+            <div class="final-cta-bg" aria-hidden="true">
+                <img src="<?= e(asset('images/alpes-final-cta-background.webp')) ?>" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+                <div class="final-cta-overlay"></div>
+            </div>
+            <div class="container final-cta-inner">
+                <div class="final-cta-content">
+                    <span class="section-kicker final-cta-kicker">VOYAGEZ AVEC ALPES TRANSPORT</span>
+                    <h2 id="final-cta-title">Votre prochain voyage commence avec Alpes Transport</h2>
+                    <p class="final-cta-text">Organisez votre transfert privé à Chamonix et dans les Alpes. Que vous voyagiez pour les vacances ou pour affaires, notre équipe vous accompagne dans l’organisation de votre prochain trajet.</p>
+                    <div class="final-cta-actions">
+                        <a class="btn btn-gold final-cta-btn" href="#reservation">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 2v3M16 2v3M3.5 9h17M5 5h14a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 19 21H5a1.5 1.5 0 0 1-1.5-1.5v-13A1.5 1.5 0 0 1 5 5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Réserver votre trajet
+                        </a>
+                        <a class="btn final-cta-btn final-cta-btn-secondary" href="<?= e($config['contact_url']) ?>">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5v-11Zm1.2.5 6.8 5.6L18.8 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Nous contacter
+                        </a>
+                    </div>
                 </div>
-                <p>Au pied du Mont-Blanc, Alpes Transport vous propose des solutions de transport privé pour vos trajets professionnels, vos vacances et vos déplacements dans les Alpes.</p>
             </div>
         </section>
 

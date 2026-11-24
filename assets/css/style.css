@@ -1796,18 +1796,30 @@ p, h1, h2, h3 { margin-top: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 24px;
+  padding: 30px 28px;
   min-height: 300px;
   background:
-    radial-gradient(120% 90% at 50% 20%, rgba(255,255,255,.98) 0%, rgba(240,235,225,.96) 55%, rgba(225,217,203,.94) 100%);
+    linear-gradient(180deg, rgba(232, 227, 219, 0.96) 0%, rgba(214, 207, 195, 0.94) 100%);
   border-bottom: 1px solid rgba(185,154,100,.18);
+}
+.fleet-card-media::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(132, 112, 82, 0.14);
+  background: radial-gradient(120% 95% at 50% 35%, rgba(250, 248, 244, 0.72) 0%, rgba(236, 230, 220, 0.18) 58%, rgba(191, 181, 165, 0.12) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+  pointer-events: none;
 }
 .fleet-card-media::after {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,.12), transparent 35%, rgba(185,154,100,.06));
+  background:
+    radial-gradient(85% 65% at 50% 45%, rgba(255,255,255,.22), transparent 72%),
+    linear-gradient(180deg, rgba(255,255,255,.12), transparent 30%, rgba(38,32,24,.04) 100%);
 }
 .fleet-card-media img {
   position: relative;
@@ -1817,7 +1829,7 @@ p, h1, h2, h3 { margin-top: 0; }
   height: auto;
   max-height: 320px;
   object-fit: contain;
-  filter: drop-shadow(0 14px 24px rgba(21,25,28,.18));
+  filter: drop-shadow(0 16px 28px rgba(27, 31, 34, .16)) drop-shadow(0 2px 4px rgba(27, 31, 34, .08));
   transition: transform .5s var(--ease);
 }
 .fleet-card:hover .fleet-card-media img { transform: scale(1.02); }
@@ -2237,7 +2249,8 @@ p, h1, h2, h3 { margin-top: 0; }
   .fleet-heading > p { font-size: 14px; line-height: 1.85; }
   .fleet-grid { grid-template-columns: 1fr; gap: 18px; }
   .fleet-card:last-child { grid-column: auto; max-width: none; }
-  .fleet-card-media { min-height: 240px; padding: 22px 18px; }
+  .fleet-card-media { min-height: 240px; padding: 24px 20px; }
+  .fleet-card-media::before { inset: 10px; border-radius: 10px; }
   .fleet-card-media img { max-height: 280px; }
   .fleet-card-body { padding: 24px 20px 24px; }
   .fleet-card h3 { font-size: 28px; }

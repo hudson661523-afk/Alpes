@@ -210,6 +210,173 @@ $config = site_config();
             </div>
         </section>
 
+        <section class="reviews-section" id="avis-clients" aria-labelledby="reviews-title">
+            <div class="container">
+                <div class="reviews-heading">
+                    <div>
+                        <span class="section-kicker">AVIS CLIENTS</span>
+                        <h2 id="reviews-title">La confiance de nos voyageurs</h2>
+                    </div>
+                    <p>Les retours de nos clients témoignent de l’attention portée à chaque trajet, de la ponctualité à l’accueil à bord, lors des déplacements au départ de Chamonix-Mont-Blanc.</p>
+                </div>
+
+                <div class="reviews-carousel" data-reviews-carousel aria-roledescription="carousel" aria-label="Avis clients Alpes Transport">
+                    <div class="reviews-carousel-top">
+                        <p class="reviews-source-note">
+                            <span class="reviews-source-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
+                            </span>
+                            Avis issus de Google, affichés sur le site d’Alpes Transport.
+                        </p>
+                        <div class="reviews-controls">
+                            <button type="button" class="reviews-control reviews-autoplay" data-reviews-autoplay aria-pressed="true" aria-label="Mettre le carrousel en pause">
+                                <svg class="reviews-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h3v14H7zm7 0h3v14h-3z"/></svg>
+                                <svg class="reviews-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5l11 7-11 7z"/></svg>
+                                <span class="reviews-control-text" data-reviews-autoplay-text>Pause</span>
+                            </button>
+                            <button type="button" class="reviews-control" data-reviews-prev aria-label="Avis précédent">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 18l-6-6 6-6"/></svg>
+                            </button>
+                            <button type="button" class="reviews-control" data-reviews-next aria-label="Avis suivant">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18l6-6-6-6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="sr-only" aria-live="polite" data-reviews-status></p>
+
+                    <div class="reviews-viewport" data-reviews-viewport tabindex="0" role="region" aria-label="Carrousel des avis clients">
+                        <div class="reviews-track" data-reviews-track>
+                            <article class="review-card" aria-label="Avis de Philippe Ego">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                                    </span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>Groupe de 8 personnes, nous avons été pris en charge par Amal. Très professionnel et surtout ponctuel. Hyper souriant et agréable, il nous a conseillé quelques resto / bar sur Chamonix. Je recommande vivement</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">PE</span>
+                                    <span class="review-author">
+                                        <span class="review-name">Philippe Ego</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+
+                            <article class="review-card" aria-label="Avis de Alexandre Baillieux">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>Parfait, 3 prises en charge par Amal, hyper sympa, toujours à l’heure je recommande ++</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">AB</span>
+                                    <span class="review-author">
+                                        <span class="review-name">Alexandre Baillieux</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+
+                            <article class="review-card" aria-label="Avis de JM DECOUX">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>29 juin 2026 Transport les Houches - Annecy : excellent chauffeur, très sympathique, qui nous a fait passer un voyage très agréable. Merci !</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">JD</span>
+                                    <span class="review-author">
+                                        <span class="review-name">JM DECOUX</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+
+                            <article class="review-card" aria-label="Avis de charlotte gruet">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>Mohammed est un chauffeur agréable le trajet est très confortable et rassurant. Aller les yeux fermés, le chauffeur lui les a biens ouvert 😁 très ponctuel !!! ravi davoir eu ce taxi</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">CG</span>
+                                    <span class="review-author">
+                                        <span class="review-name">charlotte gruet</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+
+                            <article class="review-card" aria-label="Avis de Zara Revill">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>Our taxi driver was amazing, we were looking for a garage to fix our broken down campervan and unfortunately the first place couldn’t do it, so he took us to another garage nearby and luckily they could have a look. He really went out of his way to help us out, and was very polite and chatty (smooth drive too and was patient with our hassle haha!) Would definitely recommend using this taxi service!</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">ZR</span>
+                                    <span class="review-author">
+                                        <span class="review-name">Zara Revill</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+
+                            <article class="review-card" aria-label="Avis de Julie Pomerleau">
+                                <div class="review-card-top">
+                                    <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
+                                    <div class="review-stars" role="img" aria-label="Note : 5 sur 5">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5l2.95 5.98 6.6.96-4.77 4.65 1.12 6.58L12 17.56l-5.9 3.11 1.12-6.58L2.45 9.44l6.6-.96L12 2.5z"/></svg>
+                                    </div>
+                                </div>
+                                <blockquote class="review-text">
+                                    <p>Très sympathique et vraiment accommodant</p>
+                                </blockquote>
+                                <footer class="review-footer">
+                                    <span class="review-avatar" aria-hidden="true">JP</span>
+                                    <span class="review-author">
+                                        <span class="review-name">Julie Pomerleau</span>
+                                        <span class="review-meta">Avis Google</span>
+                                    </span>
+                                </footer>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="reviews-pagination" data-reviews-pagination aria-label="Pagination des avis"></div>
+
+                    <div class="reviews-footer">
+                        <a class="btn btn-outline reviews-google-link" href="https://maps.app.goo.gl/anAp8irkqAi4voKp9" target="_blank" rel="noopener noreferrer">
+                            Voir tous les avis Google
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="intro" id="intro" aria-labelledby="intro-title">
             <div class="container intro-inner">
                 <div>

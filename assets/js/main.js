@@ -464,3 +464,187 @@
   }
 })();
 /* Location autocomplete is provided by location-providers.js and location-autocomplete.js. */
+
+(() => {
+  'use strict';
+
+  const carousel = document.querySelector('[data-reviews-carousel]');
+  if (!carousel) return;
+
+  const viewport = carousel.querySelector('[data-reviews-viewport]');
+  const track = carousel.querySelector('[data-reviews-track]');
+  const prev = carousel.querySelector('[data-reviews-prev]');
+  const next = carousel.querySelector('[data-reviews-next]');
+  const pagination = carousel.querySelector('[data-reviews-pagination]');
+  const status = carousel.querySelector('[data-reviews-status]');
+  const autoplayBtn = carousel.querySelector('[data-reviews-autoplay]');
+  const autoplayText = carousel.querySelector('[data-reviews-autoplay-text]');
+  const cards = Array.from(carousel.querySelectorAll('.review-card'));
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (!viewport || !track || !prev || !next || !pagination || cards.length === 0) return;
+
+  let index = 0;
+  let perView = 3;
+  let pageCount = 1;
+  let timer = null;
+  let userPaused = false;
+  let hoverPaused = false;
+  let focusPaused = false;
+
+  function getPerView() {
+    if (window.matchMedia('(max-width: 700px)').matches) return 1;
+    if (window.matchMedia('(max-width: 900px)').matches) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, cards.length - perView);
+  }
+
+  function updatePagination() {
+    pagination.innerHTML = '';
+    pageCount = maxIndex() + 1;
+    for (let i = 0; i < pageCount; i += 1) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'reviews-dot' + (i === index ? ' is-active' : '');
+      dot.setAttribute('aria-label', 'Afficher le groupe d’avis ' + (i + 1));
+      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+      dot.addEventListener('click', () => {
+        userPaused = true;
+        syncAutoplay();
+        goTo(i, true);
+      });
+      pagination.appendChild(dot);
+    }
+  }
+
+  function updateStatus(announce) {
+    const from = index + 1;
+    const to = Math.min(cards.length, index + perView);
+    const msg = 'Avis ' + from + ' à ' + to + ' sur ' + cards.length;
+    if (announce && status) status.textContent = msg;
+    prev.disabled = index === 0;
+    next.disabled = index >= maxIndex();
+    pagination.querySelectorAll('.reviews-dot').forEach((dot, i) => {
+      const active = i === index;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-current', active ? 'true' : 'false');
+    });
+  }
+
+  function cardWidth() {
+    const first = cards[0];
+    const second = cards[1];
+    if (!first) return 0;
+    const width = first.getBoundingClientRect().width;
+    if (!second) return width;
+    const gap = Math.max(0, second.getBoundingClientRect().left - first.getBoundingClientRect().right);
+    return width + gap;
+  }
+
+  function goTo(nextIndex, announce) {
+    index = Math.max(0, Math.min(maxIndex(), nextIndex));
+    const offset = -(index * cardWidth());
+    track.style.transform = 'translate3d(' + offset + 'px,0,0)';
+    updateStatus(!!announce);
+  }
+
+  function stopTimer() {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function canAutoplay() {
+    return !userPaused && !hoverPaused && !focusPaused && !reducedMotion.matches && maxIndex() > 0;
+  }
+
+  function syncAutoplay() {
+    const playing = canAutoplay();
+    if (autoplayBtn) {
+      autoplayBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      autoplayBtn.setAttribute('aria-label', playing ? 'Mettre le carrousel en pause' : 'Lancer le carrousel');
+    }
+    if (autoplayText) autoplayText.textContent = playing ? 'Pause' : 'Lecture';
+    stopTimer();
+    if (playing) {
+      timer = window.setInterval(() => {
+        const nextIndex = index >= maxIndex() ? 0 : index + 1;
+        goTo(nextIndex, false);
+      }, 6500);
+    }
+  }
+
+  function refresh() {
+    const nextPerView = getPerView();
+    if (nextPerView !== perView) {
+      perView = nextPerView;
+      index = Math.min(index, maxIndex());
+      updatePagination();
+    }
+    goTo(index, false);
+    syncAutoplay();
+  }
+
+  prev.addEventListener('click', () => { userPaused = true; syncAutoplay(); goTo(index - 1, true); });
+  next.addEventListener('click', () => { userPaused = true; syncAutoplay(); goTo(index + 1, true); });
+
+  if (autoplayBtn) {
+    autoplayBtn.addEventListener('click', () => {
+      userPaused = !userPaused;
+      syncAutoplay();
+      updateStatus(true);
+    });
+  }
+
+  carousel.addEventListener('mouseenter', () => { hoverPaused = true; syncAutoplay(); });
+  carousel.addEventListener('mouseleave', () => { hoverPaused = false; syncAutoplay(); });
+  carousel.addEventListener('focusin', () => { focusPaused = true; syncAutoplay(); });
+  carousel.addEventListener('focusout', (e) => {
+    if (!carousel.contains(e.relatedTarget)) { focusPaused = false; syncAutoplay(); }
+  });
+
+  viewport.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); userPaused = true; syncAutoplay(); goTo(index - 1, true); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); userPaused = true; syncAutoplay(); goTo(index + 1, true); }
+  });
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchDeltaX = 0;
+  let touching = false;
+  viewport.addEventListener('touchstart', (e) => {
+    if (!e.touches || !e.touches[0]) return;
+    touching = true;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchDeltaX = 0;
+  }, { passive: true });
+  viewport.addEventListener('touchmove', (e) => {
+    if (!touching || !e.touches || !e.touches[0]) return;
+    const dx = e.touches[0].clientX - touchStartX;
+    const dy = e.touches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy)) touchDeltaX = dx;
+  }, { passive: true });
+  viewport.addEventListener('touchend', () => {
+    if (!touching) return;
+    touching = false;
+    if (Math.abs(touchDeltaX) > 45) {
+      userPaused = true;
+      syncAutoplay();
+      goTo(index + (touchDeltaX < 0 ? 1 : -1), true);
+    }
+  });
+
+  const onMotionChange = () => syncAutoplay();
+  if (typeof reducedMotion.addEventListener === 'function') reducedMotion.addEventListener('change', onMotionChange);
+  else if (typeof reducedMotion.addListener === 'function') reducedMotion.addListener(onMotionChange);
+
+  window.addEventListener('resize', refresh);
+  perView = getPerView();
+  updatePagination();
+  refresh();
+})();

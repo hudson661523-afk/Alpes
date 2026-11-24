@@ -93,9 +93,10 @@ $socialIcons = [
                     </li>
                     <li>
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-                        <span>Chamonix-Mont-Blanc, France</span>
+                        <a href="<?= e($config['maps_url']) ?>" target="_blank" rel="noopener noreferrer"><?= e($config['address']) ?></a>
                     </li>
                 </ul>
+                <p class="footer-business-details">SIRET <?= e($config['siret']) ?> · <?= e(implode(' · ', $config['licences'])) ?></p>
                 <div class="footer-actions">
                     <a class="btn btn-whatsapp" href="<?= e($config['whatsapp']) ?>" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11.7c0 4.3-3.5 7.8-7.8 7.8-1.3 0-2.6-.3-3.7-.9L3 20l1.5-4.4A7.7 7.7 0 0 1 3.3 11C3.3 6.7 6.8 3.2 11 3.2S20 6.7 20 11Zm-5.5 3.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.4l.4-.5c.1-.1.1-.3.2-.4 0-.1 0-.3 0-.4l-.8-1.8c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.7.7-.7 1.7s.7 2 .8 2.1c.1.2 1.4 2.1 3.4 2.9 1.2.5 1.6.6 2.2.5.3 0 1-.1 1.6-.6.5-.4.8-1 .9-1.1.1-.2.1-.3 0-.4Z"/></svg>

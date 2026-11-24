@@ -5,14 +5,22 @@
  */
 return [
     'site_name'        => 'Alpes Transport',
-    'page_title'       => 'Alpes Transport | Chauffeur privé à Chamonix',
-    'page_description' => 'Alpes Transport vous accompagne à Chamonix pour vos transferts aéroport, déplacements privés et trajets dans les Alpes.',
+    'page_title'       => 'Taxi Chamonix | Chauffeur privé & transfert aéroport – Alpes Transport',
+    'page_description' => 'Taxi à Chamonix-Mont-Blanc : Alpes Transport organise vos transferts aéroport, trajets avec chauffeur privé et déplacements sur réservation dans les Alpes, en France, Suisse et Italie.',
 
     'phone'      => '+33 (0)6 73 54 98 05',
     'phone_href' => 'tel:+33673549805',
     'whatsapp'   => 'https://wa.me/+33673549805',
     'email'      => 'alpestransport@gmail.com',
     'email_href' => 'mailto:alpestransport@gmail.com',
+    'address'    => '15 Route des Combes, 74400 Chamonix-Mont-Blanc, France',
+    'maps_url'   => 'https://maps.app.goo.gl/anAp8irkqAi4voKp9',
+    'siret'      => '538 714 072 00021',
+    'licences'   => [
+        'Licence voyageurs 2022/84/0000371',
+        'Licence VTC EVTC074220050',
+        'Licence Taxi n° 9 Chamonix-Mont-Blanc',
+    ],
 
     'home_url'    => '/',
     'booking_url' => 'https://alpestransport.fr/reserver-en-ligne/',
@@ -53,5 +61,16 @@ return [
         ['label' => 'Facebook', 'url' => 'https://www.facebook.com/profile.php?id=61591380857146'],
         ['label' => 'YouTube', 'url' => 'https://www.youtube.com/channel/UCJnDBS0c4UpfiN3H60zS6fg'],
         ['label' => 'Instagram', 'url' => 'https://www.instagram.com/alpestransportlimo/'],
+    ],
+
+    // All profiles are published on the verified original website and are used only in structured data.
+    'schema_socials' => [
+        'https://x.com/AlpesTransport',
+        'https://www.facebook.com/profile.php?id=61591380857146',
+        'https://www.youtube.com/channel/UCJnDBS0c4UpfiN3H60zS6fg',
+        'https://www.pinterest.com/alpestransportlimo/_pins/',
+        'https://www.instagram.com/alpestransportlimo/',
+        'https://www.dailymotion.com/user/alpestransport',
+        'https://www.tiktok.com/@alpestransport',
     ],
 ];

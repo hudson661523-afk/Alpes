@@ -22,7 +22,7 @@ $aboutImageSize = is_file($aboutImageFile) ? @getimagesize($aboutImageFile) : fa
             <h2 id="about-title">Un chauffeur privé à Chamonix, <em>à la mesure de vos trajets.</em></h2>
 
             <p>À Chamonix-Mont-Blanc, Alpes Transport propose depuis 2011 un service de taxi et de chauffeur privé pour vos déplacements en France et vers les grandes destinations européennes. Notre flotte Mercedes accompagne particuliers, professionnels, groupes et personnes à mobilité réduite, avec des chauffeurs multilingues attentifs à chaque demande.</p>
-            <p>Pour un taxi à Chamonix, un transfert aéroport ou un rendez-vous d’affaires, chaque trajet est organisé à partir de votre lieu de prise en charge, de l’heure souhaitée et du nombre de passagers. Nos chauffeurs desservent notamment Genève, Lyon, Zurich et Milan, avec la même exigence de confort et de discrétion.</p>
+            <p>Pour un taxi à Chamonix, un transfert aéroport ou un rendez-vous d’affaires, chaque trajet est organisé à partir de votre lieu de prise en charge, de l’heure souhaitée et du nombre de passagers. Nos chauffeurs desservent notamment Genève, Lyon, Zurich et Milan, avec la même exigence de confort et de discrétion. Pour préparer votre séjour, le <a href="https://www.chamonix.com/" target="_blank" rel="noopener noreferrer">site officiel de l’office de tourisme de la vallée</a> présente les villages, activités et itinéraires de Chamonix-Mont-Blanc.</p>
 
             <ul class="about-highlights" aria-label="Prestations Alpes Transport">
                 <li class="about-highlight">

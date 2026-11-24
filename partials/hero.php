@@ -6,9 +6,9 @@ $slides = [
         'image'    => 'images/alpes-hero-mountains.webp',
         'position' => 'center 42%',
         'eyebrow'  => 'CHAUFFEUR PRIVÉ · CHAMONIX-MONT-BLANC',
-        'before'   => 'L’art du voyage',
-        'accent'   => 'au cœur des Alpes.',
-        'lead'     => 'Découvrez un service de chauffeur privé à Chamonix, pensé pour vos transferts aéroport, déplacements professionnels et voyages sur mesure dans les Alpes.',
+        'before'   => 'Taxi Chamonix,',
+        'accent'   => 'l’art du voyage alpin.',
+        'lead'     => 'Chauffeur privé à Chamonix, transferts aéroport et trajets sur mesure dans les Alpes, organisés sur réservation selon vos besoins.',
     ],
     [
         'image'    => 'images/alpes-hero-valley.webp',

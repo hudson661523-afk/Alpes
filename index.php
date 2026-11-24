@@ -32,7 +32,7 @@ $config = site_config();
                 <div class="services-grid">
                     <article class="service-card">
                         <div class="service-card-image">
-                            <img src="<?= e(asset('images/alpes-airport-transfer.png')) ?>" alt="Véhicule avec chauffeur pour un transfert aéroport entre Chamonix et les aéroports des Alpes" width="1448" height="1086" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-airport-transfer.webp')) ?>" alt="Véhicule avec chauffeur pour un transfert aéroport entre Chamonix et les aéroports des Alpes" width="1448" height="1086" loading="lazy" decoding="async">
                         </div>
                         <div class="service-card-content">
                             <span class="service-icon" aria-hidden="true">
@@ -46,7 +46,7 @@ $config = site_config();
 
                     <article class="service-card">
                         <div class="service-card-image">
-                            <img src="<?= e(asset('images/alpes-private-chauffeur.png')) ?>" alt="Chauffeur privé au volant d’un véhicule de prestige pour des trajets à Chamonix" width="1448" height="1086" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-private-chauffeur.webp')) ?>" alt="Chauffeur privé au volant d’un véhicule de prestige pour des trajets à Chamonix" width="1448" height="1086" loading="lazy" decoding="async">
                         </div>
                         <div class="service-card-content">
                             <span class="service-icon" aria-hidden="true">
@@ -60,7 +60,7 @@ $config = site_config();
 
                     <article class="service-card">
                         <div class="service-card-image">
-                            <img src="<?= e(asset('images/alpes-chamonix-alpine-tour.png')) ?>" alt="Route de montagne dans les Alpes près de Chamonix pour un service touristique privé" width="1448" height="1086" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-chamonix-alpine-tour.webp')) ?>" alt="Route de montagne dans les Alpes près de Chamonix pour un service touristique privé" width="1448" height="1086" loading="lazy" decoding="async">
                         </div>
                         <div class="service-card-content">
                             <span class="service-icon" aria-hidden="true">
@@ -249,7 +249,8 @@ $config = site_config();
                         <div class="reviews-track" data-reviews-track>
                             <article class="review-card" aria-label="Avis de Philippe Ego">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
@@ -271,7 +272,8 @@ $config = site_config();
 
                             <article class="review-card" aria-label="Avis de Alexandre Baillieux">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
@@ -293,7 +295,8 @@ $config = site_config();
 
                             <article class="review-card" aria-label="Avis de JM DECOUX">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
@@ -315,7 +318,8 @@ $config = site_config();
 
                             <article class="review-card" aria-label="Avis de charlotte gruet">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
@@ -337,7 +341,8 @@ $config = site_config();
 
                             <article class="review-card" aria-label="Avis de Zara Revill">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>
@@ -359,7 +364,8 @@ $config = site_config();
 
                             <article class="review-card" aria-label="Avis de Julie Pomerleau">
                                 <div class="review-card-top">
-                                    <span class="review-google" aria-label="Avis Google">
+                                    <span class="review-google">
+                                        <span class="sr-only">Avis Google</span>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.35 11.1H12v2.9h5.35c-.23 1.48-1.74 4.33-5.35 4.33-3.22 0-5.85-2.67-5.85-5.96S8.78 6.41 12 6.41c1.83 0 3.06.78 3.76 1.45l2.56-2.47C16.67 3.86 14.54 2.9 12 2.9 6.98 2.9 2.9 6.98 2.9 12s4.08 9.1 9.1 9.1c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.5Z"/></svg>
                                     </span>
                                     <span class="review-quote" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg></span>

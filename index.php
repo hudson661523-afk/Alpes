@@ -71,6 +71,48 @@ $config = site_config();
                             <a href="<?= e($config['services'][3]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
+
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-evenements-occasions-speciales.webp')) ?>" alt="Chauffeur privé accompagnant des invités lors d’un événement spécial à Chamonix" width="1448" height="1086" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-card-content">
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m9 16 2 2 4-4"/></svg>
+                            </span>
+                            <h3>Événements et Occasions Spéciales</h3>
+                            <p>Organisez vos déplacements pour vos événements privés, conférences ou occasions spéciales avec un transport élégant et soigné pour vous et vos invités.</p>
+                            <a href="<?= e($config['services'][2]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-voyages-daffaires.webp')) ?>" alt="Véhicule premium pour un déplacement professionnel dans les Alpes" width="1448" height="1086" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-card-content">
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </span>
+                            <h3>Voyages d’Affaires</h3>
+                            <p>Déplacez-vous avec sérénité pour vos rendez-vous, réunions ou transferts professionnels, entre hôtels, bureaux et aéroports dans les Alpes.</p>
+                            <a href="<?= e($config['services'][4]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-card-image">
+                            <img src="<?= e(asset('images/alpes-voyages-pour-mariages-et-evenements.webp')) ?>" alt="Voiture de transport élégant pour un mariage à Chamonix-Mont-Blanc" width="1448" height="1086" loading="lazy" decoding="async">
+                        </div>
+                        <div class="service-card-content">
+                            <span class="service-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 0 0-7.1 7.1L12 20.4l8.8-8.7a5 5 0 0 0 0-7.1Z"/></svg>
+                            </span>
+                            <h3>Voyages pour Mariages et Événements</h3>
+                            <p>Offrez à vos proches un transport élégant et ponctuel pour vos mariages et événements spéciaux, avec une attention particulière portée à votre confort.</p>
+                            <a href="<?= e($config['services'][5]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="services-bottom">

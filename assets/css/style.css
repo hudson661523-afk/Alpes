@@ -1406,14 +1406,25 @@ p, h1, h2, h3 { margin-top: 0; }
   color: rgba(255, 255, 255, .72);
   border-top: 1px solid rgba(185, 154, 100, .2);
 }
-.footer-main { padding: 86px 0 72px; }
+.footer-main { padding-block: 86px 72px; }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.35fr .9fr 1fr 1.05fr;
-  gap: clamp(34px, 4.5vw, 74px);
+  grid-template-areas:
+    "brand services destinations contact"
+    "socials services destinations contact";
+  gap: 0 clamp(34px, 4.5vw, 74px);
+  align-items: start;
 }
 .footer-column { min-width: 0; max-width: 100%; }
 .footer-column > * { min-width: 0; max-width: 100%; }
+.footer-block-brand { grid-area: brand; }
+.footer-block-contact { grid-area: contact; }
+.footer-block-socials { grid-area: socials; padding-top: 26px; }
+.footer-block-services { grid-area: services; }
+.footer-block-destinations { grid-area: destinations; }
+.footer-brand-column { display: flex; flex-direction: column; }
+.footer-brand-column .brand { display: inline-flex; max-width: 100%; }
 .footer-brand-column .brand-mark { width: 52px; }
 .footer-brand-column .brand-logo { max-width: 100%; height: auto; }
 .footer-description {
@@ -2669,10 +2680,14 @@ p, h1, h2, h3 { margin-top: 0; }
 
   .pre-footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .pre-footer-side p { max-width: 620px; }
-  .footer-main { padding: 72px 0 60px; }
+  .footer-main { padding-block: 72px 60px; }
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 52px 48px;
+    grid-template-areas:
+      "brand contact"
+      "socials contact"
+      "services destinations";
+    gap: 40px 48px;
   }
 }
 
@@ -2775,11 +2790,53 @@ p, h1, h2, h3 { margin-top: 0; }
   .pre-footer-actions .btn { width: 100%; }
   .footer-text-link { justify-content: center; }
 
-  .footer-main { padding: 60px 0 48px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 42px; }
-  .footer-description { max-width: 520px; }
-  .footer-actions { flex-direction: column; align-items: stretch; }
-  .footer-actions .btn { width: 100%; }
+  .footer-main { padding-block: 60px 48px; }
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "brand"
+      "contact"
+      "socials"
+      "services"
+      "destinations";
+    gap: 34px;
+  }
+  .footer-column,
+  .footer-column > *,
+  .footer-brand-column .brand,
+  .footer-description,
+  .footer-location,
+  .footer-contact-list,
+  .footer-contact-list li,
+  .footer-contact-list a,
+  .footer-business-details,
+  .footer-links a,
+  .footer-bottom p,
+  .footer-bottom-links a {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .footer-brand-column .brand-logo { width: min(100%, 220px); }
+  .footer-description { max-width: 100%; margin: 24px 0 0; font-size: 14px; line-height: 1.85; }
+  .footer-location { margin-top: 0; font-size: 13px; line-height: 1.7; }
+  .footer-socials { margin-top: 0; gap: 12px; }
+  .footer-socials a { width: 44px; height: 44px; }
+  .footer-heading { margin-bottom: 18px; font-size: 11px; }
+  .footer-links,
+  .footer-contact-list { gap: 14px; }
+  .footer-links a,
+  .footer-contact-list a,
+  .footer-business-details,
+  .footer-bottom p,
+  .footer-bottom-links a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .footer-contact-list li { gap: 12px; }
+  .footer-contact-list svg { margin-top: 3px; }
+  .footer-actions { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 24px; }
+  .footer-actions .btn { width: 100%; min-width: 0; }
   .footer-bottom-inner {
     align-items: flex-start;
     flex-direction: column;

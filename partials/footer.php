@@ -33,7 +33,7 @@ $socialIcons = [
 <footer class="site-footer">
     <div class="container footer-main">
         <div class="footer-grid">
-            <div class="footer-column footer-brand-column">
+            <div class="footer-column footer-brand-column footer-block footer-block-brand">
                 <a class="brand" href="<?= e($config['home_url']) ?>">
                     <img
                         class="brand-logo"
@@ -50,39 +50,11 @@ $socialIcons = [
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
                     <span>Chamonix-Mont-Blanc, France</span>
                 </p>
-                <ul class="footer-socials" aria-label="Réseaux sociaux">
-                    <?php foreach ($config['socials'] as $social): ?>
-                        <li>
-                            <a href="<?= e($social['url']) ?>" target="_blank" rel="noopener noreferrer">
-                                <?= $socialIcons[$social['label']] ?>
-                                <span class="sr-only"><?= e($social['label']) ?></span>
-                            </a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
             </div>
 
-            <nav class="footer-column" aria-labelledby="footer-services-title">
-                <h2 class="footer-heading" id="footer-services-title">Nos Services</h2>
-                <ul class="footer-links">
-                    <?php foreach ($config['services'] as $service): ?>
-                        <li><a href="<?= e($service['url']) ?>" target="_blank" rel="noopener noreferrer"><?= e($service['label']) ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
-            </nav>
-
-            <nav class="footer-column" aria-labelledby="footer-destinations-title">
-                <h2 class="footer-heading" id="footer-destinations-title">Destinations</h2>
-                <ul class="footer-links">
-                    <?php foreach ($config['footer_destinations'] as $destination): ?>
-                        <li><a href="<?= e($destination['url']) ?>" target="_blank" rel="noopener noreferrer"><?= e($destination['label']) ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
-            </nav>
-
-            <div class="footer-column footer-contact-column">
+            <div class="footer-column footer-contact-column footer-block footer-block-contact" aria-labelledby="footer-contact-title">
                 <h2 class="footer-heading" id="footer-contact-title">Contact &amp; Réservations</h2>
-                <ul class="footer-contact-list" aria-labelledby="footer-contact-title">
+                <ul class="footer-contact-list">
                     <li>
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 2.8 9 7.1 7.4 9c1 2 2.6 3.6 4.6 4.6l1.9-1.6 4.3 2.4-.4 3.1c-.2 1.1-1.1 1.9-2.2 1.9C8.2 19.4 4.6 15.8 4 7.5c0-1.1.8-2 1.8-2.2l.8-.5Z"/></svg>
                         <a href="<?= e($config['phone_href']) ?>"><?= e($config['phone']) ?></a>
@@ -108,6 +80,37 @@ $socialIcons = [
                     </a>
                 </div>
             </div>
+
+            <div class="footer-column footer-block footer-block-socials">
+                <ul class="footer-socials" aria-label="Réseaux sociaux">
+                    <?php foreach ($config['socials'] as $social): ?>
+                        <li>
+                            <a href="<?= e($social['url']) ?>" target="_blank" rel="noopener noreferrer">
+                                <?= $socialIcons[$social['label']] ?>
+                                <span class="sr-only"><?= e($social['label']) ?></span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <nav class="footer-column footer-block footer-block-services" aria-labelledby="footer-services-title">
+                <h2 class="footer-heading" id="footer-services-title">Nos Services</h2>
+                <ul class="footer-links">
+                    <?php foreach ($config['services'] as $service): ?>
+                        <li><a href="<?= e($service['url']) ?>" target="_blank" rel="noopener noreferrer"><?= e($service['label']) ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+
+            <nav class="footer-column footer-block footer-block-destinations" aria-labelledby="footer-destinations-title">
+                <h2 class="footer-heading" id="footer-destinations-title">Destinations</h2>
+                <ul class="footer-links">
+                    <?php foreach ($config['footer_destinations'] as $destination): ?>
+                        <li><a href="<?= e($destination['url']) ?>" target="_blank" rel="noopener noreferrer"><?= e($destination['label']) ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
         </div>
     </div>
 

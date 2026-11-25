@@ -74,7 +74,7 @@ $config = site_config();
 
                     <article class="service-card">
                         <div class="service-card-image">
-                            <img src="<?= e(asset('images/alpes-evenements-occasions-speciales.webp')) ?>" alt="Chauffeur privé accompagnant des invités lors d’un événement spécial à Chamonix" width="1448" height="1086" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-evenements-occasions-speciales.webp')) ?>" alt="Chauffeur privé accompagnant des invités lors d’un événement spécial à Chamonix" width="1672" height="941" loading="lazy" decoding="async">
                         </div>
                         <div class="service-card-content">
                             <span class="service-icon" aria-hidden="true">
@@ -88,7 +88,7 @@ $config = site_config();
 
                     <article class="service-card">
                         <div class="service-card-image">
-                            <img src="<?= e(asset('images/alpes-voyages-daffaires.webp')) ?>" alt="Véhicule premium pour un déplacement professionnel dans les Alpes" width="1448" height="1086" loading="lazy" decoding="async">
+                            <img src="<?= e(asset('images/alpes-voyages-daffaires.webp')) ?>" alt="Véhicule premium pour un déplacement professionnel dans les Alpes" width="1672" height="941" loading="lazy" decoding="async">
                         </div>
                         <div class="service-card-content">
                             <span class="service-icon" aria-hidden="true">

@@ -8,28 +8,6 @@ $socialIcons = [
     'Instagram' => '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>',
 ];
 ?>
-<section class="pre-footer" aria-labelledby="pre-footer-title">
-    <div class="container pre-footer-inner">
-        <div>
-            <span class="section-kicker section-kicker-light">UN TRAJET, UNE ATTENTION PARTICULIÈRE</span>
-            <h2 id="pre-footer-title">Votre prochain voyage <em>commence ici.</em></h2>
-        </div>
-        <div class="pre-footer-side">
-            <p>Confiez-nous votre transfert à Chamonix et vers les destinations alpines voisines. Nous organisons votre trajet selon votre programme, avec une attention particulière portée à votre confort.</p>
-            <div class="pre-footer-actions">
-                <a class="btn btn-gold" href="<?= e($config['booking_url']) ?>" target="_blank" rel="noopener noreferrer">
-                    Réserver votre transfert
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-                </a>
-                <a class="footer-text-link" href="<?= e($config['contact_url']) ?>" target="_blank" rel="noopener noreferrer">
-                    Nous contacter
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <footer class="site-footer">
     <div class="container footer-main">
         <div class="footer-grid">

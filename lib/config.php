@@ -5,8 +5,8 @@
  */
 return [
     'site_name'        => 'Alpes Transport',
-    'page_title'       => 'Taxi Chamonix | Chauffeur privé & transfert aéroport – Alpes Transport',
-    'page_description' => 'Taxi à Chamonix-Mont-Blanc : Alpes Transport organise vos transferts aéroport, trajets avec chauffeur privé et déplacements sur réservation dans les Alpes, en France, Suisse et Italie.',
+    'page_title'       => 'Taxi Chamonix | Chauffeur privé – Alpes Transport',
+    'page_description' => 'Taxi Chamonix : Alpes Transport propose des transferts aéroport et des trajets avec chauffeur privé sur réservation en France, Suisse et Italie.',
 
     'phone'      => '+33 (0)6 73 54 98 05',
     'phone_href' => 'tel:+33673549805',

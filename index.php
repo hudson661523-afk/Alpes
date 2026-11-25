@@ -26,7 +26,7 @@ $config = site_config();
                         <span class="section-kicker">NOS SERVICES</span>
                         <h2 id="services-title">Des services de transport privé à Chamonix,<br><em>pensés pour vos déplacements dans les Alpes.</em></h2>
                     </div>
-                    <p>Alpes Transport vous accompagne à Chamonix-Mont-Blanc pour vos transferts, vos trajets sur réservation et vos découvertes de la vallée, avec un service soigné et adapté à vos besoins.</p>
+                    <p>Alpes Transport vous accompagne pour vos trajets en taxi à Chamonix-Mont-Blanc, vos transferts aéroport, vos déplacements sur réservation et vos découvertes de la vallée, avec un service adapté à vos besoins.</p>
                 </div>
 
                 <div class="services-grid">
@@ -129,7 +129,7 @@ $config = site_config();
                         <span class="section-kicker">POURQUOI NOUS CHOISIR</span>
                         <h2 id="pourquoi-nous-title">Pourquoi choisir Alpes Transport à Chamonix&nbsp;?</h2>
                     </div>
-                    <p>À Chamonix-Mont-Blanc, Alpes Transport organise vos déplacements privés sur réservation, avec une attention portée au confort de votre trajet et à vos besoins de voyage dans les Alpes.</p>
+                    <p>Pour vos déplacements en taxi à Chamonix, Alpes Transport vous propose un service sur réservation, adapté à vos besoins et à vos trajets dans les Alpes.</p>
                 </div>
 
                 <div class="why-choose-grid">
@@ -138,7 +138,7 @@ $config = site_config();
                             <svg viewBox="0 0 24 24" focusable="false"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
                         </span>
                         <h3>Transport privé sur réservation</h3>
-                        <p>Profitez d’un service de transport privé à Chamonix-Mont-Blanc pour vos trajets personnels ou professionnels, organisé sur réservation selon votre programme.</p>
+                        <p>Profitez d’un service de taxi et de transport privé à Chamonix-Mont-Blanc pour vos trajets personnels ou professionnels, organisé sur réservation selon votre programme.</p>
                     </article>
 
                     <article class="why-card">

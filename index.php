@@ -40,7 +40,7 @@ $config = site_config();
                             </span>
                             <h3>Transferts Aéroport</h3>
                             <p>Profitez d’un transfert privé entre Chamonix et les aéroports de la région, notamment Genève, Lyon, Chambéry, Milan ou Zurich, pour un trajet serein dès votre arrivée.</p>
-                            <a href="<?= e($config['services'][0]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][0]['url']) ?>" class="service-link">Découvrir les transferts aéroport <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
@@ -54,7 +54,7 @@ $config = site_config();
                             </span>
                             <h3>Chauffeur Privé</h3>
                             <p>Pour vos déplacements personnels ou professionnels à Chamonix et dans les Alpes, bénéficiez d’un service de chauffeur privé sur réservation, discret et confortable.</p>
-                            <a href="<?= e($config['services'][1]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][1]['url']) ?>" class="service-link">Découvrir le chauffeur privé <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
@@ -68,7 +68,7 @@ $config = site_config();
                             </span>
                             <h3>Service Touristique</h3>
                             <p>Explorez Chamonix-Mont-Blanc et les paysages alpins lors d’excursions privées, pour découvrir la région à votre rythme selon vos envies.</p>
-                            <a href="<?= e($config['services'][3]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][3]['url']) ?>" class="service-link">Découvrir le service touristique <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
@@ -82,7 +82,7 @@ $config = site_config();
                             </span>
                             <h3>Événements et Occasions Spéciales</h3>
                             <p>Organisez vos déplacements pour vos événements privés, conférences ou occasions spéciales avec un transport élégant et soigné pour vous et vos invités.</p>
-                            <a href="<?= e($config['services'][2]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][2]['url']) ?>" class="service-link">Découvrir les événements <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
@@ -96,7 +96,7 @@ $config = site_config();
                             </span>
                             <h3>Voyages d’Affaires</h3>
                             <p>Déplacez-vous avec sérénité pour vos rendez-vous, réunions ou transferts professionnels, entre hôtels, bureaux et aéroports dans les Alpes.</p>
-                            <a href="<?= e($config['services'][4]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][4]['url']) ?>" class="service-link">Découvrir les voyages d’affaires <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
 
@@ -110,7 +110,7 @@ $config = site_config();
                             </span>
                             <h3>Voyages pour Mariages et Événements</h3>
                             <p>Offrez à vos proches un transport élégant et ponctuel pour vos mariages et événements spéciaux, avec une attention particulière portée à votre confort.</p>
-                            <a href="<?= e($config['services'][5]['url']) ?>" class="service-link">En savoir plus <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+                            <a href="<?= e($config['services'][5]['url']) ?>" class="service-link">Découvrir les mariages et événements <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
                         </div>
                     </article>
                 </div>
@@ -534,7 +534,7 @@ $config = site_config();
                             </h3>
                             <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-toggle-6" hidden>
                                 <div class="faq-panel-inner">
-                                    <p>Oui, Alpes Transport propose des trajets privés depuis Chamonix vers des destinations en Suisse et en Italie, notamment Genève, Zurich, Milan ou Turin. Vous pouvez consulter les <a href="https://alpestransport.fr/nos-services/">services de transport privé</a> pour identifier la prestation la plus adaptée à votre déplacement.</p>
+                                    <p>Oui, Alpes Transport propose des trajets privés depuis Chamonix vers la Suisse et l’Italie, notamment vers <a href="https://alpestransport.fr/transfert-geneve-chamonix/">Genève</a> à proximité, ainsi que vers des destinations plus éloignées comme <a href="https://alpestransport.fr/transfert-zurich-chamonix/">Zurich</a>, <a href="https://alpestransport.fr/transfert-milan-chamonix/">Milan</a> ou Turin, selon votre itinéraire. Vous pouvez consulter les <a href="https://alpestransport.fr/nos-services/">services de transport privé</a> pour identifier la prestation la plus adaptée à votre déplacement.</p>
                                 </div>
                             </div>
                         </article>
@@ -584,7 +584,7 @@ $config = site_config();
                         <article class="faq-item">
                             <h3 class="faq-question">
                                 <button type="button" class="faq-toggle" id="faq-toggle-10" aria-expanded="false" aria-controls="faq-panel-10">
-                                    <span class="faq-question-text">Comment organiser un transfert depuis l'aéroport de Genève vers Chamonix ?</span>
+                                    <span class="faq-question-text">Comment organiser un transfert depuis l’aéroport de Genève vers Chamonix ?</span>
                                     <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
                                 </button>
                             </h3>

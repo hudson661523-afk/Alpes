@@ -118,9 +118,9 @@ $slides = [
         </button>
     </div>
 
-    <a class="scroll-cue" href="#intro">
+    <a class="scroll-cue" href="#reservation">
         <span>Explorer</span>
-        <span class="sr-only">Faire défiler vers la section suivante</span>
+        <span class="sr-only">Faire défiler vers la section réservation</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2v11m-5-5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
     </a>
 </section>

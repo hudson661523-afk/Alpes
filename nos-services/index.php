@@ -69,7 +69,7 @@ $services = [
         'title' => 'Service Touristique',
         'image' => 'images/alpes-chamonix-alpine-tour.webp',
         'alt' => 'Excursion alpine privée au départ de Chamonix-Mont-Blanc',
-        'description' => 'Explorez Chamonix, les Alpes et les destinations environnantes grâce à un service touristique privé. Vos excursions et visites sont organisées avec confort, pour profiter pleinement des paysages et des étapes de votre parcours.',
+        'description' => 'Explorez Chamonix, les Alpes et les destinations environnantes grâce à un service touristique privé. Vos excursions et visites sont organisées sur réservation, avec un trajet confortable entre les étapes de votre parcours.',
         'detail' => 'Une solution agréable pour les excursions, visites culturelles et découvertes locales en famille ou entre amis.',
         'url' => 'https://alpestransport.fr/service-touristique/',
         'cta' => 'Découvrir le service touristique',
@@ -80,7 +80,7 @@ $services = [
         'title' => 'Voyages d’Affaires',
         'image' => 'images/alpes-voyages-daffaires.webp',
         'alt' => 'Chauffeur privé pour un voyage d’affaires au départ de Chamonix',
-        'description' => 'Simplifiez vos déplacements professionnels avec un transport fiable et confortable entre hôtels, lieux de rendez-vous, gares ou aéroports. Le service est pensé pour les voyageurs d’affaires qui recherchent ponctualité et sérénité.',
+        'description' => 'Simplifiez vos déplacements professionnels avec un transport privé confortable entre hôtels, lieux de rendez-vous, gares ou aéroports. Ce service est adapté aux voyageurs d’affaires qui souhaitent organiser leurs trajets avec sérénité.',
         'detail' => 'Convient aux réunions, conférences, transferts professionnels et itinéraires à horaires définis.',
         'url' => 'https://alpestransport.fr/voyages-daffaires/',
         'cta' => 'Découvrir les voyages d’affaires',
@@ -163,7 +163,7 @@ $reasons = [
                     <span class="nos-intro-rule" aria-hidden="true"></span>
                 </div>
                 <div class="nos-intro-copy">
-                    <p>Depuis Chamonix-Mont-Blanc, Alpes Transport organise vos trajets sur réservation pour répondre à des besoins variés : transfert aéroport, chauffeur privé, déplacement professionnel, sortie touristique ou événement particulier.</p>
+                    <p>Alpes Transport propose un service de taxi à Chamonix pour vos déplacements sur réservation. Selon votre itinéraire, choisissez parmi nos transferts aéroport, services de chauffeur privé, déplacements professionnels, excursions touristiques et transports pour événements.</p>
                     <p>Que vous voyagiez seul, en famille, en groupe ou dans un cadre professionnel, vous pouvez choisir la prestation la plus adaptée à votre itinéraire. Notre équipe vous accompagne avec une approche claire, confortable et orientée service.</p>
                     <ul class="nos-intro-categories" aria-label="Catégories de services">
                         <li>TRANSFERTS AÉROPORT</li>

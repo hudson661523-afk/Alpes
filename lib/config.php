@@ -39,6 +39,7 @@ return [
     ],
 
     'destinations' => [
+        ['label' => 'Toutes les destinations', 'url' => '/destinations/'],
         ['label' => 'Genève & Aéroport GVA', 'url' => 'https://alpestransport.fr/transfert-geneve-chamonix/'],
         ['label' => 'Lyon', 'url' => 'https://alpestransport.fr/transfert-lyon-chamonix/'],
         ['label' => 'Milan', 'url' => 'https://alpestransport.fr/transfert-milan-chamonix/'],

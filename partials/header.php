@@ -1,4 +1,8 @@
-<?php $config = site_config(); ?>
+<?php
+$config = site_config();
+$activeNav = isset($activeNav) && is_string($activeNav) ? $activeNav : 'home';
+$homeHref = $activeNav === 'home' ? '#accueil' : '/';
+?>
 <header class="site-header" id="site-header">
     <div class="utility-bar">
         <div class="container utility-inner">
@@ -27,7 +31,7 @@
     </div>
 
     <div class="container header-inner">
-        <a class="brand" href="#accueil">
+        <a class="brand" href="<?= e($homeHref) ?>">
             <img
                 class="brand-logo"
                 src="<?= e(asset('images/logo-Alpes-Transport.png')) ?>"
@@ -42,7 +46,7 @@
         </button>
 
         <nav class="primary-nav" id="primary-navigation" aria-label="Navigation principale">
-            <a class="nav-link is-active" href="#accueil" aria-current="page">Accueil</a>
+            <a class="nav-link<?= $activeNav === 'home' ? ' is-active' : '' ?>" href="<?= e($homeHref) ?>"<?= $activeNav === 'home' ? ' aria-current="page"' : '' ?>>Accueil</a>
 
             <div class="nav-item">
                 <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-dropdown">
@@ -58,13 +62,13 @@
             </div>
 
             <div class="nav-item">
-                <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="destinations-dropdown">
+                <button class="nav-link nav-dropdown-toggle<?= $activeNav === 'destinations' ? ' is-active' : '' ?>" type="button" aria-expanded="false" aria-controls="destinations-dropdown"<?= $activeNav === 'destinations' ? ' aria-current="page"' : '' ?>>
                     Destinations
                     <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m3 6 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
                 </button>
                 <div class="nav-dropdown" id="destinations-dropdown">
                     <?php foreach ($config['destinations'] as $destination): ?>
-                        <a href="<?= e($destination['url']) ?>"><?= e($destination['label']) ?></a>
+                        <a href="<?= e($destination['url']) ?>"<?= $activeNav === 'destinations' && $destination['url'] === '/destinations/' ? ' aria-current="page"' : '' ?>><?= e($destination['label']) ?></a>
                     <?php endforeach; ?>
                 </div>
             </div>

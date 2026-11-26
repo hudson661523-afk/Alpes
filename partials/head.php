@@ -1,19 +1,27 @@
 <?php
 $config = site_config();
-$heroImage = asset('images/alpes-hero-mountains.webp');
-$canonical = 'https://alpestransport.fr/';
-$ogImage = 'https://alpestransport.fr' . asset('images/alpes-hero-mountains.webp');
 $siteUrl = 'https://alpestransport.fr/';
-$logoUrl = 'https://alpestransport.fr' . asset('images/logo-Alpes-Transport.png');
+$logoUrl = $siteUrl . ltrim(asset('images/logo-Alpes-Transport.png'), '/');
+$defaultOgImage = $siteUrl . ltrim(asset('images/alpes-hero-mountains.webp'), '/');
+$heroImage = asset('images/alpes-hero-mountains.webp');
+
+$pageTitle = isset($pageTitle) && is_string($pageTitle) && $pageTitle !== '' ? $pageTitle : $config['page_title'];
+$pageDescription = isset($pageDescription) && is_string($pageDescription) && $pageDescription !== '' ? $pageDescription : $config['page_description'];
+$canonical = isset($canonical) && is_string($canonical) && $canonical !== '' ? $canonical : $siteUrl;
+$ogImage = isset($ogImage) && is_string($ogImage) && $ogImage !== '' ? $ogImage : $defaultOgImage;
+$ogType = isset($ogType) && is_string($ogType) && $ogType !== '' ? $ogType : 'website';
+$preloadImage = isset($preloadImage) && is_string($preloadImage) && $preloadImage !== '' ? $preloadImage : $heroImage;
+$schemaExtra = isset($schemaExtra) && is_array($schemaExtra) ? $schemaExtra : [];
+
 $schema = [
     '@context' => 'https://schema.org',
-    '@graph' => [
+    '@graph' => array_merge([
         [
             '@type' => ['LocalBusiness', 'TaxiService'],
             '@id' => $siteUrl . '#business',
             'name' => $config['site_name'],
             'url' => $siteUrl,
-            'image' => $ogImage,
+            'image' => $defaultOgImage,
             'logo' => $logoUrl,
             'telephone' => $config['phone'],
             'email' => $config['email'],
@@ -64,18 +72,18 @@ $schema = [
             '@type' => 'WebPage',
             '@id' => $canonical . '#webpage',
             'url' => $canonical,
-            'name' => $config['page_title'],
-            'description' => $config['page_description'],
+            'name' => $pageTitle,
+            'description' => $pageDescription,
             'inLanguage' => 'fr-FR',
             'isPartOf' => ['@id' => $siteUrl . '#website'],
             'about' => ['@id' => $siteUrl . '#business'],
         ],
-    ],
+    ], $schemaExtra),
 ];
 ?>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="<?= e($config['page_description']) ?>">
+<meta name="description" content="<?= e($pageDescription) ?>">
 <meta name="theme-color" content="#15191C">
 <meta name="format-detection" content="telephone=no">
 
@@ -83,20 +91,20 @@ $schema = [
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow, noarchive">
 
-<title><?= e($config['page_title']) ?></title>
+<title><?= e($pageTitle) ?></title>
 <link rel="canonical" href="<?= e($canonical) ?>">
 
 <meta property="og:locale" content="fr_FR">
-<meta property="og:type" content="website">
+<meta property="og:type" content="<?= e($ogType) ?>">
 <meta property="og:site_name" content="<?= e($config['site_name']) ?>">
-<meta property="og:title" content="<?= e($config['page_title']) ?>">
-<meta property="og:description" content="<?= e($config['page_description']) ?>">
+<meta property="og:title" content="<?= e($pageTitle) ?>">
+<meta property="og:description" content="<?= e($pageDescription) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
-<meta property="og:image:alt" content="Alpes Transport - chauffeur privé et taxi à Chamonix-Mont-Blanc">
+<meta property="og:image:alt" content="<?= e($pageTitle) ?>">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<?= e($config['page_title']) ?>">
-<meta name="twitter:description" content="<?= e($config['page_description']) ?>">
+<meta name="twitter:title" content="<?= e($pageTitle) ?>">
+<meta name="twitter:description" content="<?= e($pageDescription) ?>">
 <meta name="twitter:image" content="<?= e($ogImage) ?>">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -105,7 +113,7 @@ $schema = [
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="<?= e($heroImage) ?>" fetchpriority="high">
+<link rel="preload" as="image" href="<?= e($preloadImage) ?>" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= e(asset('css/style.css')) ?>">
 <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>

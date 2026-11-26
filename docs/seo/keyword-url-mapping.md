@@ -1,7 +1,8 @@
 # Alpes Transport — Keyword-to-URL mapping
 
-**Status:** Working SEO document, audited 2026-11-19.  
-**Scope:** The 28 URLs in the live `page-sitemap.xml`. No page was rewritten or removed in this task.  
+**Status:** Working SEO document, audited 2026-11-19; destinations hub record added 2026-11-26.
+**Scope:** The 28 URLs in the live `page-sitemap.xml` remain the original preserved inventory. No page was rewritten, removed or redirected in this task.
+**Approved addition:** `/destinations/` is an owner-approved discovery hub on staging (eventual production canonical `https://alpestransport.fr/destinations/`). It must not replace or cannibalize existing route, service, or destination-guide pages.
 **Audit:** No previous keyword mapping or SEO guidance file existed in the repository. Live titles, meta descriptions, H1s and H2s were reviewed for all 28 page URLs; all returned HTTP 200.
 
 ## Data integrity
@@ -47,6 +48,12 @@
 ## Page → intent and keyword assignment
 
 Derived keywords are marked `(derived, unverified)`. They describe the existing page topic but are not from the supplied list and have no volume data.
+
+## Approved destination hub (new URL, outside original 28-URL inventory)
+
+| URL | Primary intent | Main keyword | Secondary keywords | Cannibalization guard |
+|---|---|---|---|---|
+| `/destinations/` | Destination discovery hub | destinations depuis Chamonix (derived, unverified) | destinations desservies depuis Chamonix; transfert privé Chamonix; chauffeur privé à Chamonix; excursions alpines (derived, unverified) | Discovery hub only. Keep route/service primaries on `/transfert-geneve-chamonix/`, `/transfert-milan-chamonix/`, `/chauffeur-prive-chamonix/`, `/service-touristique/`, `/transferts-aeroport/`, `/geneve-suisse/`, `/turin-aoste-italie/`. Link out to those pages; do not duplicate their booking/intent focus. |
 
 | # | Preserved URL | Primary intent | Main keyword | Secondary keywords | Cannibalization guard |
 |---:|---|---|---|---|---|

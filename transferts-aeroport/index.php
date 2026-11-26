@@ -107,7 +107,7 @@ $schemaExtra = [
                         <div class="ta-airport-body">
                             <p class="ta-airport-label">Lyon · France</p>
                             <h3>Aéroport de Lyon-Saint-Exupéry (LYS)</h3>
-                            <p>Planifiez votre trajet privé entre Chamonix et l’aéroport de Lyon-Saint-Exupéry. Communiquez votre lieu de départ, la date et l’horaire souhaités afin de préparer votre transfert.</p>
+                            <p>Planifiez votre trajet privé entre Chamonix et l’aéroport de Lyon-Saint-Exupéry, au départ ou à l’arrivée. Communiquez votre lieu de départ, la date et l’horaire souhaités afin de préparer votre transfert.</p>
                             <a class="service-link" href="https://alpestransport.fr/transfert-lyon-chamonix/">
                                 Voir le transfert Lyon
                                 <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -123,7 +123,7 @@ $schemaExtra = [
                         <div class="ta-airport-body">
                             <p class="ta-airport-label">Milan · Italie</p>
                             <h3>Aéroports de Milan</h3>
-                            <p>Alpes Transport propose des trajets privés entre Chamonix et Milan pour vos déplacements vers les aéroports desservis. Précisez l’aéroport concerné lors de votre demande de réservation.</p>
+                            <p>Alpes Transport propose des trajets privés entre Chamonix et Milan. Précisez l’aéroport concerné lors de votre demande de réservation afin de confirmer l’organisation du trajet.</p>
                             <a class="service-link" href="https://alpestransport.fr/transfert-milan-chamonix/">
                                 Voir le transfert Milan
                                 <span aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -227,7 +227,7 @@ $schemaExtra = [
                 <div class="ta-faq-list">
                     <details class="ta-faq-item">
                         <summary>Quels aéroports sont présentés sur cette page ?</summary>
-                        <p>Cette page présente principalement les transferts vers l’aéroport de Genève, l’aéroport de Lyon-Saint-Exupéry et les aéroports de Milan. Pour toute autre destination aéroportuaire, précisez votre demande lors de la réservation.</p>
+                        <p>Cette page présente principalement les transferts vers l’aéroport de Genève, l’aéroport de Lyon-Saint-Exupéry et les aéroports de Milan. Pour toute autre destination aéroportuaire, vous pouvez préciser votre demande lors de la réservation afin que nous en vérifiions la faisabilité.</p>
                     </details>
                     <details class="ta-faq-item">
                         <summary>Comment demander un transfert aéroport ?</summary>

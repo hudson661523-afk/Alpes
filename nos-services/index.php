@@ -157,13 +157,20 @@ $reasons = [
 
         <section class="nos-intro" aria-labelledby="nos-intro-title">
             <div class="container nos-intro-inner">
-                <div>
+                <div class="nos-intro-lead">
                     <span class="section-kicker">TRANSPORT SUR RÉSERVATION</span>
                     <h2 id="nos-intro-title">Des solutions de transport pour <em>chaque déplacement</em></h2>
+                    <span class="nos-intro-rule" aria-hidden="true"></span>
                 </div>
                 <div class="nos-intro-copy">
                     <p>Depuis Chamonix-Mont-Blanc, Alpes Transport organise vos trajets sur réservation pour répondre à des besoins variés : transfert aéroport, chauffeur privé, déplacement professionnel, sortie touristique ou événement particulier.</p>
                     <p>Que vous voyagiez seul, en famille, en groupe ou dans un cadre professionnel, vous pouvez choisir la prestation la plus adaptée à votre itinéraire. Notre équipe vous accompagne avec une approche claire, confortable et orientée service.</p>
+                    <ul class="nos-intro-categories" aria-label="Catégories de services">
+                        <li>TRANSFERTS AÉROPORT</li>
+                        <li>CHAUFFEUR PRIVÉ</li>
+                        <li>EXCURSIONS</li>
+                        <li>ÉVÉNEMENTS</li>
+                    </ul>
                 </div>
             </div>
         </section>

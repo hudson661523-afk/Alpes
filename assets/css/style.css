@@ -1893,6 +1893,22 @@ p, h1, h2, h3 { margin-top: 0; }
   line-height: 1.6;
   text-align: right;
 }
+.fleet-carousel { position: relative; }
+.fleet-carousel-controls,
+.fleet-carousel-pagination { display: none; }
+.fleet-carousel-btn {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(185,154,100,.35);
+  background: rgba(255,255,255,.04); color: var(--gold-light); display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+}
+.fleet-carousel-btn:hover,.fleet-carousel-btn:focus-visible { background: rgba(185,154,100,.14); border-color: rgba(216,195,154,.7); outline: none; }
+.fleet-carousel-btn svg { width: 18px; height: 18px; }
+.fleet-carousel-dot {
+  width: 28px; height: 3px; padding: 0; border: 0; border-radius: 999px; background: rgba(247,245,240,.24);
+  cursor: pointer; transition: background .25s var(--ease), transform .25s var(--ease);
+}
+.fleet-carousel-dot.is-active { background: var(--gold); transform: scaleX(1.15); }
+.fleet-carousel-dot:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 
 /* ==========================================================================
    Reviews (homepage)
@@ -2700,14 +2716,22 @@ p, h1, h2, h3 { margin-top: 0; }
   .fleet-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 34px; }
   .fleet-heading h2 { font-size: 40px; }
   .fleet-heading > p { font-size: 14px; line-height: 1.85; }
-  .fleet-grid { grid-template-columns: 1fr; gap: 18px; }
-  .fleet-card:last-child { grid-column: auto; max-width: none; }
+  .fleet-carousel-controls { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 14px; }
+  .fleet-grid {
+    display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 2px 2px 8px; margin: 0 -2px;
+    scrollbar-width: none;
+  }
+  .fleet-grid::-webkit-scrollbar { display: none; }
+  .fleet-grid:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+  .fleet-card, .fleet-card:last-child { flex: 0 0 100%; width: 100%; max-width: 100%; scroll-snap-align: center; grid-column: auto; justify-self: stretch; }
   .fleet-card-media { height: 240px; min-height: 240px; max-height: 240px; flex-basis: 240px; padding: 20px 16px; }
   .fleet-card-media::before { content: none; display: none; }
   .fleet-card-body { padding: 24px 20px 24px; }
   .fleet-card h3 { font-size: 28px; }
   .fleet-specs { gap: 10px; margin-bottom: 22px; }
   .fleet-specs li { padding: 10px; }
+  .fleet-carousel-pagination { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
   .fleet-visual-note { text-align: left; margin-top: 18px; }
 
   .reviews-section { padding: 72px 0; }

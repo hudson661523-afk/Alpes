@@ -26,7 +26,7 @@ $config = site_config();
                         <span class="section-kicker">NOS SERVICES</span>
                         <h2 id="services-title">Des services de transport privé à Chamonix,<br><em>pensés pour vos déplacements dans les Alpes.</em></h2>
                     </div>
-                    <p>Alpes Transport vous accompagne pour vos trajets en taxi à Chamonix-Mont-Blanc, vos transferts aéroport, vos déplacements sur réservation et vos découvertes de la vallée, avec un service adapté à vos besoins.</p>
+                    <p>Alpes Transport vous accompagne pour vos trajets avec Taxi Chamonix à Chamonix-Mont-Blanc, vos transferts aéroport, vos déplacements sur réservation et vos découvertes de la vallée, avec un service adapté à vos besoins.</p>
                 </div>
 
                 <div class="services-grid">
@@ -129,7 +129,7 @@ $config = site_config();
                         <span class="section-kicker">POURQUOI NOUS CHOISIR</span>
                         <h2 id="pourquoi-nous-title">Pourquoi choisir Alpes Transport à Chamonix&nbsp;?</h2>
                     </div>
-                    <p>Pour vos déplacements en taxi à Chamonix, Alpes Transport vous propose un service sur réservation, adapté à vos besoins et à vos trajets dans les Alpes.</p>
+                    <p>Pour vos déplacements avec Taxi Chamonix, Alpes Transport vous propose un service sur réservation, adapté à vos besoins et à vos trajets dans les Alpes.</p>
                 </div>
 
                 <div class="why-choose-grid">
@@ -178,75 +178,86 @@ $config = site_config();
                     <p>Pour vos transferts, déplacements professionnels ou séjours dans les Alpes, Alpes Transport met à disposition des véhicules confortables, adaptés au nombre de passagers et à vos bagages.</p>
                 </div>
 
-                <div class="fleet-grid">
-                    <article class="fleet-card">
-                        <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-mercedes-s-class.png')) ?>" alt="Mercedes Classe S noire pour vos déplacements privés à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
-                        </div>
-                        <div class="fleet-card-body">
-                            <h3>Mercedes Classe S</h3>
-                            <p>Berline d’exception, la Mercedes Classe S offre un confort raffiné pour les clients VIP et les déplacements professionnels au départ de Chamonix.</p>
-                            <ul class="fleet-specs" aria-label="Capacités Mercedes Classe S">
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
-                                    <span class="fleet-spec-label">Passagers</span>
-                                    <strong class="fleet-spec-value">3</strong>
-                                </li>
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-                                    <span class="fleet-spec-label">Bagages</span>
-                                    <strong class="fleet-spec-value">2</strong>
-                                </li>
-                            </ul>
-                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
-                        </div>
-                    </article>
+                <div class="fleet-carousel" data-fleet-carousel>
+                    <div class="fleet-carousel-controls" aria-label="Contrôles de la flotte">
+                        <button type="button" class="fleet-carousel-btn" data-fleet-prev aria-label="Véhicule précédent">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <button type="button" class="fleet-carousel-btn" data-fleet-next aria-label="Véhicule suivant">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+                    <div class="fleet-grid" data-fleet-track role="region" aria-roledescription="carrousel" aria-label="Flotte Alpes Transport" tabindex="0">
+                        <article class="fleet-card" data-fleet-slide>
+                            <div class="fleet-card-media">
+                                <img src="<?= e(asset('images/alpes-fleet-mercedes-s-class.png')) ?>" alt="Mercedes Classe S noire pour vos déplacements privés à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
+                            </div>
+                            <div class="fleet-card-body">
+                                <h3>Mercedes Classe S</h3>
+                                <p>Berline d’exception, la Mercedes Classe S offre un confort raffiné pour les clients VIP et les déplacements professionnels au départ de Chamonix.</p>
+                                <ul class="fleet-specs" aria-label="Capacités Mercedes Classe S">
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                        <span class="fleet-spec-label">Passagers</span>
+                                        <strong class="fleet-spec-value">3</strong>
+                                    </li>
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                        <span class="fleet-spec-label">Bagages</span>
+                                        <strong class="fleet-spec-value">2</strong>
+                                    </li>
+                                </ul>
+                                <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                            </div>
+                        </article>
 
-                    <article class="fleet-card">
-                        <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-renault-trafic.png')) ?>" alt="Renault Trafic noir pour les transferts de groupe à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
-                        </div>
-                        <div class="fleet-card-body">
-                            <h3>Renault Trafic Van</h3>
-                            <p>Spacieux et pratique, le Renault Trafic Van convient aux transferts aéroport, aux voyages en groupe et aux déplacements avec bagages depuis Chamonix.</p>
-                            <ul class="fleet-specs" aria-label="Capacités Renault Trafic Van">
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
-                                    <span class="fleet-spec-label">Passagers</span>
-                                    <strong class="fleet-spec-value">8</strong>
-                                </li>
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-                                    <span class="fleet-spec-label">Bagages</span>
-                                    <strong class="fleet-spec-value">8</strong>
-                                </li>
-                            </ul>
-                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
-                        </div>
-                    </article>
+                        <article class="fleet-card" data-fleet-slide>
+                            <div class="fleet-card-media">
+                                <img src="<?= e(asset('images/alpes-fleet-renault-trafic.png')) ?>" alt="Renault Trafic noir pour les transferts de groupe à Chamonix" width="1402" height="1122" loading="lazy" decoding="async">
+                            </div>
+                            <div class="fleet-card-body">
+                                <h3>Renault Trafic Van</h3>
+                                <p>Spacieux et pratique, le Renault Trafic Van convient aux transferts aéroport, aux voyages en groupe et aux déplacements avec bagages depuis Chamonix.</p>
+                                <ul class="fleet-specs" aria-label="Capacités Renault Trafic Van">
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                        <span class="fleet-spec-label">Passagers</span>
+                                        <strong class="fleet-spec-value">8</strong>
+                                    </li>
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                        <span class="fleet-spec-label">Bagages</span>
+                                        <strong class="fleet-spec-value">8</strong>
+                                    </li>
+                                </ul>
+                                <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                            </div>
+                        </article>
 
-                    <article class="fleet-card">
-                        <div class="fleet-card-media">
-                            <img src="<?= e(asset('images/alpes-fleet-mercedes-v-class.png')) ?>" alt="Mercedes Classe V noire pour les transferts privés dans les Alpes" width="1402" height="1122" loading="lazy" decoding="async">
-                        </div>
-                        <div class="fleet-card-body">
-                            <h3>Mercedes Classe V</h3>
-                            <p>Avec son espace généreux et son confort premium, la Mercedes Classe V est idéale pour les familles, les groupes et les séjours au ski dans les Alpes.</p>
-                            <ul class="fleet-specs" aria-label="Capacités Mercedes Classe V">
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
-                                    <span class="fleet-spec-label">Passagers</span>
-                                    <strong class="fleet-spec-value">7</strong>
-                                </li>
-                                <li>
-                                    <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
-                                    <span class="fleet-spec-label">Bagages</span>
-                                    <strong class="fleet-spec-value">6</strong>
-                                </li>
-                            </ul>
-                            <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
-                        </div>
-                    </article>
+                        <article class="fleet-card" data-fleet-slide>
+                            <div class="fleet-card-media">
+                                <img src="<?= e(asset('images/alpes-fleet-mercedes-v-class.png')) ?>" alt="Mercedes Classe V noire pour les transferts privés dans les Alpes" width="1402" height="1122" loading="lazy" decoding="async">
+                            </div>
+                            <div class="fleet-card-body">
+                                <h3>Mercedes Classe V</h3>
+                                <p>Avec son espace généreux et son confort premium, la Mercedes Classe V est idéale pour les familles, les groupes et les séjours au ski dans les Alpes.</p>
+                                <ul class="fleet-specs" aria-label="Capacités Mercedes Classe V">
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="3"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a3 3 0 0 1 0 5.75"/></svg></span>
+                                        <span class="fleet-spec-label">Passagers</span>
+                                        <strong class="fleet-spec-value">7</strong>
+                                    </li>
+                                    <li>
+                                        <span class="fleet-spec-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg></span>
+                                        <span class="fleet-spec-label">Bagages</span>
+                                        <strong class="fleet-spec-value">6</strong>
+                                    </li>
+                                </ul>
+                                <a class="btn btn-gold fleet-card-cta" href="#reservation">Demander un devis</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="fleet-carousel-pagination" data-fleet-pagination aria-label="Pagination de la flotte"></div>
                 </div>
                 <p class="fleet-visual-note">Visuels illustratifs des modèles de véhicules.</p>
             </div>
@@ -448,7 +459,7 @@ $config = site_config();
                         <span class="section-kicker">QUESTIONS FRÉQUENTES</span>
                         <h2 id="faq-title">Tout savoir avant votre départ</h2>
                     </div>
-                    <p>Retrouvez ici les réponses essentielles pour organiser votre taxi à Chamonix, un transfert aéroport ou un trajet avec chauffeur privé dans les Alpes, en toute sérénité.</p>
+                    <p>Retrouvez ici les réponses essentielles sur Taxi Chamonix : transferts aéroport, trajets avec chauffeur privé et déplacements sur réservation dans les Alpes, en toute sérénité.</p>
                 </div>
 
                 <div class="faq-grid" data-faq-accordion>
@@ -456,13 +467,13 @@ $config = site_config();
                         <article class="faq-item is-open">
                             <h3 class="faq-question">
                                 <button type="button" class="faq-toggle" id="faq-toggle-1" aria-expanded="true" aria-controls="faq-panel-1">
-                                    <span class="faq-question-text">Comment réserver un taxi à Chamonix ?</span>
+                                    <span class="faq-question-text">Comment réserver un trajet avec Taxi Chamonix ?</span>
                                     <span class="faq-icon" aria-hidden="true"><svg class="faq-icon-plus" viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14"/></svg><svg class="faq-icon-minus" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/></svg></span>
                                 </button>
                             </h3>
                             <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-toggle-1">
                                 <div class="faq-panel-inner">
-                                    <p>Pour réserver un taxi à Chamonix, vous pouvez préparer votre demande depuis le formulaire de réservation de la page d’accueil, puis finaliser par téléphone, WhatsApp ou via la <a href="https://alpestransport.fr/reserver-en-ligne/">page de réservation en ligne</a>. Indiquez votre lieu de prise en charge, votre destination, la date, l’heure et le nombre de passagers afin que l’équipe Alpes Transport puisse organiser votre trajet.</p>
+                                    <p>Pour réserver avec Taxi Chamonix, vous pouvez préparer votre demande depuis le formulaire de réservation de la page d’accueil, puis finaliser par téléphone, WhatsApp ou via la <a href="https://alpestransport.fr/reserver-en-ligne/">page de réservation en ligne</a>. Indiquez votre lieu de prise en charge, votre destination, la date, l’heure et le nombre de passagers afin que l’équipe Alpes Transport puisse organiser votre trajet.</p>
                                 </div>
                             </div>
                         </article>

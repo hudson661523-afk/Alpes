@@ -468,6 +468,63 @@
 (() => {
   'use strict';
 
+  /* Fleet carousel: mobile-only scroll-snap with dots/arrows */
+  const fleetCarousel = document.querySelector('[data-fleet-carousel]');
+  if (fleetCarousel) {
+    const track = fleetCarousel.querySelector('[data-fleet-track]');
+    const slides = Array.from(fleetCarousel.querySelectorAll('[data-fleet-slide]'));
+    const prev = fleetCarousel.querySelector('[data-fleet-prev]');
+    const next = fleetCarousel.querySelector('[data-fleet-next]');
+    const pagination = fleetCarousel.querySelector('[data-fleet-pagination]');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let active = 0;
+    const mobile = () => window.matchMedia('(max-width: 767px)').matches;
+    const setActive = (i, scroll) => {
+      active = Math.max(0, Math.min(i, slides.length - 1));
+      pagination.querySelectorAll('.fleet-carousel-dot').forEach((dot, idx) => {
+        const on = idx === active;
+        dot.classList.toggle('is-active', on);
+        dot.setAttribute('aria-current', on ? 'true' : 'false');
+        dot.setAttribute('aria-label', `Voir véhicule ${idx + 1} sur ${slides.length}${on ? ' (actuel)' : ''}`);
+      });
+      if (scroll && mobile()) {
+        const left = slides[active].offsetLeft - (track.clientWidth - slides[active].clientWidth) / 2;
+        track.scrollTo({ left: Math.max(0, left), behavior: prefersReduced ? 'auto' : 'smooth' });
+      }
+    };
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'fleet-carousel-dot' + (i === 0 ? ' is-active' : '');
+      dot.setAttribute('aria-label', `Voir véhicule ${i + 1} sur ${slides.length}`);
+      dot.addEventListener('click', () => setActive(i, true));
+      pagination.appendChild(dot);
+    });
+    setActive(0, false);
+    prev?.addEventListener('click', () => setActive(active - 1, true));
+    next?.addEventListener('click', () => setActive(active + 1, true));
+    track.addEventListener('keydown', (e) => {
+      if (!mobile()) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); setActive(active + 1, true); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); setActive(active - 1, true); }
+    });
+    let t;
+    track.addEventListener('scroll', () => {
+      if (!mobile()) return;
+      window.clearTimeout(t);
+      t = window.setTimeout(() => {
+        const center = track.scrollLeft + track.clientWidth / 2;
+        let best = 0, dist = Infinity;
+        slides.forEach((s, i) => {
+          const d = Math.abs((s.offsetLeft + s.clientWidth / 2) - center);
+          if (d < dist) { dist = d; best = i; }
+        });
+        if (best !== active) setActive(best, false);
+      }, 60);
+    }, { passive: true });
+    window.addEventListener('resize', () => { if (mobile()) setActive(active, false); });
+  }
+
   const carousel = document.querySelector('[data-reviews-carousel]');
   if (!carousel) return;
 

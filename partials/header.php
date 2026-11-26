@@ -49,12 +49,12 @@ $homeHref = $activeNav === 'home' ? '#accueil' : '/';
             <a class="nav-link<?= $activeNav === 'home' ? ' is-active' : '' ?>" href="<?= e($homeHref) ?>"<?= $activeNav === 'home' ? ' aria-current="page"' : '' ?>>Accueil</a>
 
             <div class="nav-item">
-                <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-dropdown">
+                <button class="nav-link nav-dropdown-toggle<?= $activeNav === 'services' ? ' is-active' : '' ?>" type="button" aria-expanded="false" aria-controls="services-dropdown"<?= $activeNav === 'services' ? ' aria-current="page"' : '' ?>>
                     Nos services
                     <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m3 6 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
                 </button>
                 <div class="nav-dropdown" id="services-dropdown">
-                    <a class="dropdown-heading" href="https://alpestransport.fr/nos-services/">Toutes les prestations</a>
+                    <a class="dropdown-heading" href="/nos-services/"<?= $activeNav === 'services' ? ' aria-current="page"' : '' ?>>Toutes les prestations</a>
                     <?php foreach ($config['services'] as $service): ?>
                         <a href="<?= e($service['url']) ?>"><?= e($service['label']) ?></a>
                     <?php endforeach; ?>

@@ -2659,6 +2659,21 @@ p, h1, h2, h3 { margin-top: 0; }
   .review-card { flex-basis: calc((100% - 24px) / 2); }
 }
 
+@media (max-width: 767px) {
+  .fleet-grid { grid-template-columns: 1fr; }
+  .fleet-card:last-child { grid-column: auto; max-width: none; }
+  .fleet-carousel-controls { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 14px; }
+  .fleet-grid {
+    display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 2px 2px 8px; margin: 0 -2px;
+    scrollbar-width: none;
+  }
+  .fleet-grid::-webkit-scrollbar { display: none; }
+  .fleet-grid:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+  .fleet-card, .fleet-card:last-child { flex: 0 0 100%; width: 100%; max-width: 100%; scroll-snap-align: center; grid-column: auto; justify-self: stretch; }
+  .fleet-carousel-pagination { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
+}
+
 @media (max-width: 700px) {
   .utility-inner { min-height: 30px; }
   .utility-list { gap: 14px; }
@@ -2716,22 +2731,12 @@ p, h1, h2, h3 { margin-top: 0; }
   .fleet-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 34px; }
   .fleet-heading h2 { font-size: 40px; }
   .fleet-heading > p { font-size: 14px; line-height: 1.85; }
-  .fleet-carousel-controls { display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 14px; }
-  .fleet-grid {
-    display: flex; gap: 16px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-    scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 2px 2px 8px; margin: 0 -2px;
-    scrollbar-width: none;
-  }
-  .fleet-grid::-webkit-scrollbar { display: none; }
-  .fleet-grid:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
-  .fleet-card, .fleet-card:last-child { flex: 0 0 100%; width: 100%; max-width: 100%; scroll-snap-align: center; grid-column: auto; justify-self: stretch; }
   .fleet-card-media { height: 240px; min-height: 240px; max-height: 240px; flex-basis: 240px; padding: 20px 16px; }
   .fleet-card-media::before { content: none; display: none; }
   .fleet-card-body { padding: 24px 20px 24px; }
   .fleet-card h3 { font-size: 28px; }
   .fleet-specs { gap: 10px; margin-bottom: 22px; }
   .fleet-specs li { padding: 10px; }
-  .fleet-carousel-pagination { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
   .fleet-visual-note { text-align: left; margin-top: 18px; }
 
   .reviews-section { padding: 72px 0; }

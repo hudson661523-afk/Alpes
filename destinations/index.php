@@ -165,8 +165,8 @@ $destinations = [
                     <h2 id="dest-intro-title">Un chauffeur privé pour vos trajets <em>entre les Alpes et les grandes villes</em></h2>
                 </div>
                 <div class="dest-intro-copy">
-                    <p>Que vous souhaitiez rejoindre un aéroport, un hôtel, une station voisine ou une ville emblématique, Alpes Transport organise vos déplacements au départ de Chamonix avec soin. Nos trajets s’adressent aux voyageurs en séjour, aux familles, aux groupes et aux clients professionnels qui recherchent un transport fiable et confortable.</p>
-                    <p>Cette page présente une sélection de destinations fréquemment demandées. Pour un itinéraire spécifique, une prise en charge personnalisée ou un besoin particulier, notre équipe reste disponible pour vous accompagner.</p>
+                    <p>Que vous souhaitiez rejoindre un aéroport, un hôtel, une station de ski ou une ville comme Genève, Annecy ou Milan, Alpes Transport organise vos trajets privés au départ de Chamonix-Mont-Blanc. Nos services s’adressent aux voyageurs, aux familles, aux groupes et aux professionnels, avec des déplacements adaptés à votre itinéraire et à vos besoins.</p>
+                    <p>Découvrez les destinations desservies depuis Chamonix, en France, en Suisse et en Italie, notamment Megève, Courmayeur, Montreux et Interlaken. Pour un trajet particulier, précisez votre lieu de départ, votre destination, la date et le nombre de passagers afin de préparer votre réservation.</p>
                 </div>
             </div>
         </section>

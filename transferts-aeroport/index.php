@@ -100,13 +100,8 @@ $schemaExtra = [
                     </article>
 
                     <article class="ta-airport-card">
-                        <div class="ta-airport-media ta-airport-visual">
-                            <div class="ta-visual-panel" aria-hidden="true">
-                                <div class="ta-visual-lines"></div>
-                                <svg class="ta-visual-plane" viewBox="0 0 24 24" focusable="false"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z" fill="currentColor"/></svg>
-                                <span class="ta-visual-code">LYS</span>
-                                <span class="ta-visual-name">Lyon-Saint-Exupéry</span>
-                            </div>
+                        <div class="ta-airport-media">
+                            <img src="<?= e(asset('images/alpes-lyon-saint-exupery-airport.webp')) ?>" alt="Illustration d’un transfert privé à l’aéroport de Lyon-Saint-Exupéry" width="1448" height="1086" loading="lazy" decoding="async">
                             <span class="ta-airport-code">LYS</span>
                         </div>
                         <div class="ta-airport-body">
@@ -121,13 +116,8 @@ $schemaExtra = [
                     </article>
 
                     <article class="ta-airport-card">
-                        <div class="ta-airport-media ta-airport-visual">
-                            <div class="ta-visual-panel" aria-hidden="true">
-                                <div class="ta-visual-lines"></div>
-                                <svg class="ta-visual-plane" viewBox="0 0 24 24" focusable="false"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z" fill="currentColor"/></svg>
-                                <span class="ta-visual-code">MILAN</span>
-                                <span class="ta-visual-name">Aéroports desservis</span>
-                            </div>
+                        <div class="ta-airport-media">
+                            <img src="<?= e(asset('images/alpes-milan-airports.webp')) ?>" alt="Illustration d’un service de chauffeur privé pour les aéroports de Milan" width="1448" height="1086" loading="lazy" decoding="async">
                             <span class="ta-airport-code">MILAN</span>
                         </div>
                         <div class="ta-airport-body">

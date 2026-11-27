@@ -69,12 +69,17 @@ $schemaExtra = [
             <div class="container tlc-intro-grid">
                 <div class="tlc-intro-head">
                     <span class="section-kicker">LYON &amp; CHAMONIX-MONT-BLANC</span>
-                    <h2 id="tlc-intro-title">Votre trajet privé entre <em>Lyon et Chamonix-Mont-Blanc</em></h2>
+                    <h2 id="tlc-intro-title">Votre trajet privé entre<br><em>Lyon et Chamonix-Mont-Blanc</em></h2>
                     <span class="tlc-rule" aria-hidden="true"></span>
+                    <p class="tlc-intro-lead">Alpes Transport organise des transferts privés entre Lyon et Chamonix-Mont-Blanc, dans les deux sens. Vous pouvez partir de l’aéroport Lyon-Saint-Exupéry, du centre-ville de Lyon ou de la vallée de Chamonix, en précisant votre adresse de prise en charge, votre destination, la date, l’horaire, le nombre de passagers et les bagages à prévoir.</p>
+                    <p class="tlc-intro-lead">Ce trajet régional relie la métropole lyonnaise aux Alpes françaises en traversant la Savoie et en remontant vers la vallée de Chamonix. La durée du parcours peut varier selon la circulation, la météo et les conditions saisonnières. En communiquant vos informations de voyage à l’avance, vous facilitez l’organisation de votre transfert Lyon Chamonix ou Chamonix Lyon.</p>
+                    <ul class="tlc-intro-points" aria-label="Points clés">
+                        <li><span class="tlc-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Aller et retour</li>
+                        <li><span class="tlc-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>Aéroport ou centre-ville</li>
+                        <li><span class="tlc-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 2v4M8 2v4M3 10h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Sur réservation</li>
+                    </ul>
                 </div>
                 <div class="tlc-intro-copy">
-                    <p>Alpes Transport organise des transferts privés entre Lyon et Chamonix-Mont-Blanc, dans les deux sens. Vous pouvez partir de l’aéroport Lyon-Saint-Exupéry, du centre-ville de Lyon ou de la vallée de Chamonix, en précisant votre adresse de prise en charge, votre destination, la date, l’horaire, le nombre de passagers et les bagages à prévoir.</p>
-                    <p>Ce trajet régional relie la métropole lyonnaise aux Alpes françaises en traversant la Savoie et en remontant vers la vallée de Chamonix. La durée du parcours peut varier selon la circulation, la météo et les conditions saisonnières. En communiquant vos informations de voyage à l’avance, vous facilitez l’organisation de votre transfert Lyon Chamonix ou Chamonix Lyon.</p>
                     <figure class="tlc-intro-figure">
                         <img src="<?= e(asset('images/alpes-airport-transfer.webp')) ?>" alt="Véhicule premium pour un transfert privé entre Lyon et Chamonix-Mont-Blanc" width="1448" height="1086" loading="lazy" decoding="async">
                     </figure>
@@ -108,21 +113,9 @@ $schemaExtra = [
                 </article>
 
                 <article class="tlc-feature tlc-feature-reverse">
-                    <div class="tlc-feature-media tlc-feature-panel" aria-hidden="true">
-                        <div class="tlc-city-panel">
-                            <div class="tlc-city-panel-bg"></div>
-                            <div class="tlc-city-panel-content">
-                                <span class="tlc-city-icon">
-                                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M8 52h48M14 52V28l10-6v30M24 52V18l8-5 8 5v34M40 52V22l10 6v24"/>
-                                        <path d="M28 26h2m4 0h2m-8 8h2m4 0h2m-8 8h2m4 0h2"/>
-                                    </svg>
-                                </span>
-                                <p class="tlc-city-kicker">LYON</p>
-                                <p class="tlc-city-title">LYON CENTRE</p>
-                                <p class="tlc-city-text">Hôtels, résidences, gares et adresses de rendez-vous</p>
-                            </div>
-                        </div>
+                    <div class="tlc-feature-media">
+                        <img src="<?= e(asset('images/alpes-lyon-centre-chamonix.webp')) ?>" alt="Transfert privé entre Lyon centre et Chamonix-Mont-Blanc" width="1448" height="1086" loading="lazy" decoding="async">
+                        <span class="tlc-feature-tag">LYON CENTRE</span>
                     </div>
                     <div class="tlc-feature-body">
                         <p class="tlc-feature-label">Centre-ville de Lyon</p>

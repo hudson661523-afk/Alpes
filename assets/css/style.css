@@ -3929,16 +3929,23 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-caption-text { display:block; color:var(--warm-white); font-family:var(--font-serif); font-size:26px; line-height:1.25; }
 
 .tlc-intro { padding:clamp(64px,6vw,92px) 0; background:#f7f4ee; }
-.tlc-intro-grid { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(28px,4vw,56px); align-items:start; }
+.tlc-intro-grid { display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr); gap:clamp(32px,4vw,64px); align-items:center; }
 .tlc-intro .section-kicker,.tlc-booking .section-kicker,.tlc-faq .section-kicker,.tlc-related .section-kicker { color:var(--gold-deep); }
 .tlc-intro h2,.tlc-section-head h2,.tlc-booking h2,.tlc-faq h2,.tlc-related h2,.tlc-final-cta h2 { margin:0; font-family:var(--font-serif); font-size:clamp(34px,3.8vw,46px); font-weight:500; line-height:1.1; letter-spacing:-.025em; text-wrap:balance; }
-.tlc-intro h2 { max-width:12ch; color:var(--charcoal); }
+.tlc-intro h2 { max-width:15ch; color:var(--charcoal); }
 .tlc-intro h2 em,.tlc-section-head h2 em,.tlc-booking h2 em,.tlc-faq h2 em,.tlc-related h2 em { color:var(--gold-deep); }
 .tlc-rule { display:block; width:56px; height:1px; margin-top:28px; background:linear-gradient(90deg,var(--gold),rgba(185,154,100,.2)); }
+.tlc-intro-lead { margin:28px 0 0; max-width:62ch; color:var(--slate-text); font-size:16px; line-height:1.9; }
+.tlc-intro-lead + .tlc-intro-lead { margin-top:16px; }
+.tlc-intro-points { display:flex; flex-wrap:wrap; gap:12px 20px; margin:28px 0 0; padding:22px 0 0; list-style:none; border-top:1px solid rgba(185,154,100,.22); }
+.tlc-intro-points li { display:inline-flex; align-items:center; gap:10px; color:var(--charcoal); font-size:12px; font-weight:600; letter-spacing:.02em; }
+.tlc-point-icon { width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; color:var(--gold-deep); background:rgba(185,154,100,.1); border:1px solid rgba(185,154,100,.2); flex-shrink:0; }
+.tlc-point-icon svg { width:15px; height:15px; }
 .tlc-intro-copy p { margin:0 0 18px; max-width:64ch; color:var(--slate-text); font-size:16px; line-height:1.9; }
 .tlc-intro-copy p:last-child { margin-bottom:0; }
-.tlc-intro-figure { margin:28px 0 0; border:1px solid rgba(185,154,100,.18); box-shadow:0 18px 44px rgba(21,25,28,.08); }
-.tlc-intro-figure img { width:100%; height:240px; object-fit:cover; filter:saturate(.9) brightness(.94); }
+.tlc-intro-figure { margin:0; border-radius:16px; overflow:hidden; border:1px solid rgba(185,154,100,.18); box-shadow:0 20px 48px rgba(21,25,28,.1); }
+.tlc-intro-figure img { width:100%; height:clamp(360px,38vw,520px); object-fit:cover; filter:saturate(.9) brightness(.94); transition:transform .7s var(--ease); display:block; }
+.tlc-intro-figure:hover img { transform:scale(1.03); }
 
 .tlc-routes { padding:clamp(84px,9vw,128px) 0; background:#111618; color:var(--warm-white); }
 .tlc-section-head { display:grid; grid-template-columns:1fr; gap:14px; align-items:start; margin-bottom:clamp(36px,4.5vw,48px); max-width:760px; }
@@ -3950,7 +3957,8 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-feature-reverse .tlc-feature-media { order:2; }
 .tlc-feature-reverse .tlc-feature-body { order:1; }
 .tlc-feature-media { position:relative; min-height:360px; background:#0d1216; }
-.tlc-feature-media img { width:100%; height:100%; min-height:360px; object-fit:cover; filter:saturate(.88) brightness(.82); }
+.tlc-feature-media img { width:100%; height:100%; min-height:360px; object-fit:cover; filter:saturate(.88) brightness(.82); transition:transform .7s var(--ease), filter .7s var(--ease); display:block; }
+.tlc-feature:hover .tlc-feature-media img { transform:scale(1.04); filter:saturate(.92) brightness(.86); }
 .tlc-feature-tag { position:absolute; top:22px; left:22px; padding:8px 12px; background:rgba(10,15,19,.55); border:1px solid rgba(185,154,100,.35); color:var(--gold-light); font-size:10px; font-weight:700; letter-spacing:.2em; backdrop-filter:blur(8px); }
 .tlc-feature-panel { display:flex; }
 .tlc-city-panel { position:relative; width:100%; min-height:360px; display:flex; align-items:center; justify-content:center; padding:32px; background:linear-gradient(145deg,#1a2127 0%,#12181d 55%,#0e1418 100%); }
@@ -3970,10 +3978,13 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-feature-list li::before { content:''; position:absolute; left:0; top:.7em; width:10px; height:1px; background:var(--gold); }
 
 .tlc-practical { padding:clamp(78px,8vw,118px) 0; background:#f7f4ee; }
+.tlc-practical .tlc-section-head.tlc-center,
+.tlc-why .tlc-section-head.tlc-center { width:100%; max-width:760px; margin-left:auto; margin-right:auto; justify-items:center; text-align:center; }
 .tlc-center { grid-template-columns:1fr; justify-items:center; text-align:center; gap:14px; }
 .tlc-center .section-kicker { justify-content:center; color:var(--gold-deep); }
 .tlc-center .section-kicker::before,.tlc-center .section-kicker::after { content:''; width:28px; height:1px; background:rgba(166,124,82,.55); }
-.tlc-center h2 { max-width:15ch; color:var(--charcoal); }
+.tlc-center h2 { max-width:15ch; color:var(--charcoal); margin-left:auto; margin-right:auto; }
+.tlc-center p { justify-self:center; text-align:center; margin-left:auto; margin-right:auto; }
 .tlc-practical-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:22px; }
 .tlc-info-card,.tlc-why-card { padding:28px 24px; border:1px solid rgba(185,154,100,.2); }
 .tlc-info-card { background:#fff; }
@@ -3986,7 +3997,7 @@ p, h1, h2, h3 { margin-top: 0; }
 
 .tlc-booking { padding:clamp(78px,8vw,118px) 0; background:#11171b; color:var(--warm-white); }
 .tlc-booking-grid { display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr); gap:clamp(28px,4vw,64px); align-items:start; }
-.tlc-booking h2 { max-width:12ch; color:var(--warm-white); }
+.tlc-booking h2 { max-width:20ch; color:var(--warm-white); }
 .tlc-booking-copy p { max-width:52ch; margin:20px 0 28px; color:rgba(247,245,240,.8); font-size:16px; line-height:1.9; }
 .tlc-steps { list-style:none; margin:0; padding:0; border-top:1px solid rgba(185,154,100,.2); }
 .tlc-steps li { display:grid; grid-template-columns:72px minmax(0,1fr); gap:20px; padding:24px 0; border-bottom:1px solid rgba(185,154,100,.16); }
@@ -4021,13 +4032,14 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-related-links { display:flex; flex-wrap:wrap; gap:14px 22px; }
 .tlc-related .service-link { color:var(--charcoal); border-color:rgba(21,25,28,.24); }
 .tlc-related .service-link:hover,.tlc-related .service-link:focus-visible { color:var(--gold-deep); border-color:rgba(166,124,82,.45); }
-.tlc-final-cta-content h2 { max-width:12ch; }
+.tlc-final-cta-content h2 { max-width:none; }
 
 @media (max-width:1100px) {
   .tlc-hero-grid,.tlc-intro-grid,.tlc-booking-grid,.tlc-faq-grid,.tlc-section-head { grid-template-columns:1fr; }
   .tlc-section-head p { justify-self:start; max-width:60ch; }
   .tlc-practical-grid,.tlc-why-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .tlc-hero-title,.tlc-intro h2,.tlc-section-head h2,.tlc-booking h2,.tlc-faq h2 { max-width:14ch; }
+  .tlc-intro-head { max-width:100%; }
 }
 @media (max-width:820px) {
   .tlc-feature,.tlc-feature-reverse { grid-template-columns:1fr; }
@@ -4041,7 +4053,8 @@ p, h1, h2, h3 { margin-top: 0; }
   .tlc-caption-text { font-size:22px; }
   .tlc-intro,.tlc-practical,.tlc-booking,.tlc-why,.tlc-faq { padding:64px 0; }
   .tlc-intro h2,.tlc-section-head h2,.tlc-booking h2,.tlc-why h2,.tlc-faq h2,.tlc-related h2,.tlc-final-cta h2 { max-width:100%; font-size:clamp(28px,8.2vw,34px); }
-  .tlc-hero-lead,.tlc-intro-copy p,.tlc-booking-copy p,.tlc-section-head p { font-size:15px; line-height:1.85; }
+  .tlc-hero-lead,.tlc-intro-copy p,.tlc-intro-lead,.tlc-booking-copy p,.tlc-section-head p { font-size:15px; line-height:1.85; }
+  .tlc-intro-figure img { height:280px; }
   .tlc-practical-grid,.tlc-why-grid { grid-template-columns:1fr; }
   .tlc-feature-body,.tlc-info-card,.tlc-why-card { padding:24px; }
   .tlc-steps li { grid-template-columns:56px minmax(0,1fr); gap:14px; }
@@ -4049,7 +4062,8 @@ p, h1, h2, h3 { margin-top: 0; }
   .tlc-faq-item summary { padding:20px 30px 20px 0; font-size:14px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tlc-feature,.tlc-hero-figure img { transition:none; }
+  .tlc-feature,.tlc-hero-figure img,.tlc-intro-figure img,.tlc-feature-media img { transition:none; }
+  .tlc-intro-figure:hover img,.tlc-feature:hover .tlc-feature-media img { transform:none; filter:none; }
 }
 
 

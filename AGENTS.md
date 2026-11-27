@@ -73,3 +73,20 @@ For every page or section request:
 
 ## Reference
 - Keyword and URL decisions: `docs/seo/keyword-url-mapping.md`.
+
+## Global Visual Design Standards
+
+Read `docs/design-system.md` before creating or modifying any page. The goal is consistency, not redesign.
+
+1. **Approved font families**: keep `--font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif` for premium headings and `--font-sans: 'Manrope', Arial, Helvetica, sans-serif` for body/UI. Do not introduce random new families.
+2. **Approved color palette**: reuse existing CSS tokens in `assets/css/style.css` (`--charcoal`, `--charcoal-soft`, `--gold`, `--gold-light`, `--gold-deep`, `--warm-white`, `--slate`, `--slate-text`, `--white`, `--text`). Do not invent off-brand colors.
+3. **Responsive heading sizes**: H1 hero 48–60px desktop typical (34–42px mobile, up to ~90px only for approved existing heroes); H2 40–46px desktop / 34–40px tablet / 28–34px mobile; H3 22–28px desktop / 20–24px mobile. Never use oversized headings.
+4. **Section spacing**: use consistent container/gutter/section rhythm (`--container: 1440px`, `--gutter: clamp(22px,5vw,72px)`, section padding typically `clamp(72px,8vw,124/148px)`). Avoid excessive empty space and inconsistent margins.
+5. **Container widths**: keep content within `var(--container)` with `var(--gutter)` padding; do not create full-width text blocks without design intent.
+6. **Button styling**: reuse `.btn`, `.btn-gold`, `.btn-outline`, `.btn-dark` patterns. Keep consistent height/padding/font/letter-spacing/hover/focus. Do not redesign buttons per page.
+7. **Image border radius and hover behavior**: use subtle 12–16px radius where rounded editorial/card media is used; preserve existing approved 18px cases unless intentionally harmonized with full audit. Use `object-fit: cover`, image-only hover zoom (`scale(1.04-1.05)`, ~450–700ms), `overflow:hidden`, no layout shift; respect `prefers-reduced-motion`.
+8. **Text contrast requirements**: never place dark text on dark backgrounds or light text on light backgrounds. Dark sections need clear heading/body contrast and sufficient overlay. Target WCAG AA where applicable. Gold is an accent, not long-paragraph text.
+9. **Heading/paragraph alignment rules**: eyebrow, heading and description should form one cohesive block. Avoid detached right-aligned headings with floating left paragraphs unless intentionally balanced and approved.
+10. **Mobile responsiveness**: test 320/375/390/768/1024/1440. No horizontal overflow; readable text; proper stacking; full-width buttons where appropriate.
+11. **Page-scoped CSS requirements**: scope new page CSS under `.page-*` and component namespace; before changing shared CSS, identify every affected page. Avoid `!important` and fragile overrides.
+12. **Rules against visual inconsistencies**: do not randomly change fonts, colors, button styles, radii, spacing, or heading scales on individual pages. Reuse tokens/classes; document any risky global change before applying.

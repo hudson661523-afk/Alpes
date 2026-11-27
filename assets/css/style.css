@@ -4075,13 +4075,14 @@ p, h1, h2, h3 { margin-top: 0; }
 .tmc-intro-copy p:last-child { margin-bottom:0; }
 
 .tmc-departure,.tmc-why { padding:clamp(84px,9vw,124px) 0; background:#fff; }
-.tmc-section-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,420px); gap:20px 48px; align-items:end; margin-bottom:clamp(38px,5vw,56px); }
+.tmc-section-head { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:20px clamp(28px,4vw,56px); align-items:start; margin-bottom:clamp(38px,5vw,56px); }
+.tmc-section-head > div,.tmc-section-head > span { min-width:0; }
 .tmc-section-head p,.tmc-faq-head p { margin:0; color:var(--slate-text); font-size:15px; line-height:1.9; }
-.tmc-section-head p { justify-self:end; max-width:42ch; }
+.tmc-section-head p { justify-self:start; max-width:54ch; padding-top:10px; }
 .tmc-departure-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:28px; align-items:stretch; }
 .tmc-departure-feature,.tmc-departure-card { border:1px solid rgba(185,154,100,.18); background:#fbfaf7; overflow:hidden; }
-.tmc-departure-media { position:relative; margin:0; background:#141a1e; }
-.tmc-departure-media img { width:100%; height:100%; object-fit:cover; filter:saturate(.88) brightness(.88); }
+.tmc-departure-media { position:relative; margin:0; background:#141a1e; overflow:hidden; }
+.tmc-departure-media img { width:100%; height:100%; object-fit:cover; filter:saturate(.88) brightness(.88); border-radius:14px; }
 .tmc-departure-feature .tmc-departure-media img { min-height:420px; }
 .tmc-departure-media--city img { min-height:300px; }
 .tmc-media-label { position:absolute; left:22px; bottom:22px; padding:9px 14px; background:rgba(13,18,22,.58); border:1px solid rgba(185,154,100,.28); color:var(--gold-light); font-size:10px; font-weight:700; letter-spacing:.22em; backdrop-filter:blur(8px); }
@@ -4094,8 +4095,8 @@ p, h1, h2, h3 { margin-top: 0; }
 
 .tmc-valley { padding:clamp(84px,9vw,124px) 0; background:#151b20; color:var(--warm-white); }
 .tmc-valley-grid { display:grid; grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr); gap:clamp(28px,4vw,56px); align-items:center; }
-.tmc-valley-media { margin:0; border:1px solid rgba(185,154,100,.18); }
-.tmc-valley-media img { width:100%; min-height:460px; height:100%; object-fit:cover; filter:saturate(.88) brightness(.84); }
+.tmc-valley-media { margin:0; border:1px solid rgba(185,154,100,.18); overflow:hidden; border-radius:16px; }
+.tmc-valley-media img { width:100%; min-height:460px; height:100%; object-fit:cover; filter:saturate(.88) brightness(.84); border-radius:16px; }
 .tmc-valley .section-kicker::before { background:rgba(185,154,100,.55); }
 .tmc-valley h2 { color:var(--warm-white); max-width:12ch; }
 .tmc-valley-content p { color:rgba(247,245,240,.76); max-width:58ch; margin-top:20px; }
@@ -4146,11 +4147,19 @@ p, h1, h2, h3 { margin-top: 0; }
 .tmc-related .service-link { color:var(--charcoal); border-color:rgba(21,25,28,.24); }
 .tmc-related .service-link:hover,.tmc-related .service-link:focus-visible { color:var(--gold-deep); border-color:rgba(166,124,82,.45); }
 .tmc-final-cta-content h2 { max-width:12ch; }
+.page-transfert-milan-chamonix .tmc-final-cta .nos-final-cta-bg img { filter:brightness(.34) saturate(.78); }
+.page-transfert-milan-chamonix .tmc-final-cta .final-cta-overlay { background:linear-gradient(90deg,rgba(8,12,16,.84) 0%,rgba(8,12,16,.68) 42%,rgba(8,12,16,.46) 100%),linear-gradient(180deg,rgba(8,12,16,.28) 0%,rgba(8,12,16,.12) 38%,rgba(8,12,16,.56) 100%); }
+.page-transfert-milan-chamonix .tmc-final-cta .tmc-final-cta-content { position:relative; z-index:2; max-width:760px; }
+.page-transfert-milan-chamonix .tmc-final-cta .section-kicker { color:var(--gold-light); }
+.page-transfert-milan-chamonix .tmc-final-cta .section-kicker::before,.page-transfert-milan-chamonix .tmc-final-cta .section-kicker::after { background:rgba(212,188,140,.7); }
+.page-transfert-milan-chamonix .tmc-final-cta h2 { color:#fff; text-shadow:0 2px 18px rgba(0,0,0,.35); }
+.page-transfert-milan-chamonix .tmc-final-cta p { color:rgba(247,245,240,.92); text-shadow:0 1px 10px rgba(0,0,0,.28); max-width:62ch; }
+.page-transfert-milan-chamonix .tmc-final-cta .final-cta-actions { position:relative; z-index:2; }
 
 @media (max-width:1100px) {
   .tmc-hero-inner,.tmc-intro-grid,.tmc-valley-grid,.tmc-booking-grid,.tmc-faq-grid,.tmc-section-head { grid-template-columns:1fr; }
   .tmc-hero-panel { max-width:520px; }
-  .tmc-section-head p { justify-self:start; max-width:60ch; }
+  .tmc-section-head p { justify-self:start; max-width:60ch; padding-top:0; }
   .tmc-departure-grid { grid-template-columns:1fr; }
   .tmc-practical-grid,.tmc-why-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .tmc-valley h2,.tmc-intro h2,.tmc-booking h2,.tmc-faq h2,.tmc-hero h1 { max-width:14ch; }
@@ -4158,6 +4167,8 @@ p, h1, h2, h3 { margin-top: 0; }
 @media (max-width:700px) {
   .tmc-hero { min-height:auto; padding:148px 0 64px; }
   .tmc-hero-lead,.tmc-intro-copy p,.tmc-section-head p,.tmc-booking-copy p,.tmc-faq-head p,.tmc-valley-content p { font-size:14px; line-height:1.85; }
+  .page-transfert-milan-chamonix .tmc-final-cta .final-cta-overlay { background:linear-gradient(180deg,rgba(8,12,16,.56) 0%,rgba(8,12,16,.72) 45%,rgba(8,12,16,.84) 100%); }
+  .page-transfert-milan-chamonix .tmc-final-cta .nos-final-cta-bg img { filter:brightness(.3) saturate(.75); }
   .tmc-hero-actions { flex-direction:column; align-items:stretch; }
   .tmc-btn,.tmc-btn-secondary,.tmc-hero-actions .btn { width:100%; justify-content:center; }
   .tmc-hero-panel,.tmc-departure-body,.tmc-info-card,.tmc-why-card { padding:24px; }

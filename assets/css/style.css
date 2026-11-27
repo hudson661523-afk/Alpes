@@ -3921,6 +3921,8 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-rule { display:block; width:56px; height:1px; margin-top:28px; background:linear-gradient(90deg,var(--gold),rgba(185,154,100,.2)); }
 .tlc-intro-copy p { margin:0 0 18px; max-width:64ch; color:#525963; font-size:15px; line-height:1.95; }
 .tlc-intro-copy p:last-child { margin-bottom:0; }
+.tlc-intro-figure { margin:28px 0 0; border:1px solid rgba(185,154,100,.18); box-shadow:0 18px 44px rgba(21,25,28,.08); }
+.tlc-intro-figure img { width:100%; height:240px; object-fit:cover; filter:saturate(.9) brightness(.94); }
 
 .tlc-routes { padding:clamp(84px,9vw,128px) 0; background:#111618; color:var(--warm-white); }
 .tlc-section-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,420px); gap:20px 48px; align-items:end; margin-bottom:clamp(40px,5vw,60px); }

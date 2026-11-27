@@ -75,6 +75,9 @@ $schemaExtra = [
                 <div class="tlc-intro-copy">
                     <p>Alpes Transport organise des transferts privés entre Lyon et Chamonix-Mont-Blanc, dans les deux sens. Vous pouvez partir de l’aéroport Lyon-Saint-Exupéry, du centre-ville de Lyon ou de la vallée de Chamonix, en précisant votre adresse de prise en charge, votre destination, la date, l’horaire, le nombre de passagers et les bagages à prévoir.</p>
                     <p>Ce trajet régional relie la métropole lyonnaise aux Alpes françaises en traversant la Savoie et en remontant vers la vallée de Chamonix. La durée du parcours peut varier selon la circulation, la météo et les conditions saisonnières. En communiquant vos informations de voyage à l’avance, vous facilitez l’organisation de votre transfert Lyon Chamonix ou Chamonix Lyon.</p>
+                    <figure class="tlc-intro-figure">
+                        <img src="<?= e(asset('images/alpes-airport-transfer.webp')) ?>" alt="Véhicule premium pour un transfert privé entre Lyon et Chamonix-Mont-Blanc" width="1448" height="1086" loading="lazy" decoding="async">
+                    </figure>
                 </div>
             </div>
         </section>

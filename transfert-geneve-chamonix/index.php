@@ -63,6 +63,7 @@ $schemaExtra = [
                 <div class="tgc-intro-copy">
                     <p>Alpes Transport organise des transferts privés entre Genève et Chamonix-Mont-Blanc, dans les deux sens. Que vous partiez de l’aéroport de Genève, du centre-ville ou de la vallée de Chamonix, votre trajet est préparé sur réservation selon votre lieu de départ, votre destination, le nombre de passagers et l’horaire souhaité.</p>
                     <p>Ce trajet transfrontalier entre la Suisse et la France relie Genève à la vallée de Chamonix. Pour faciliter l’organisation de votre transfert Genève Chamonix ou Chamonix Genève, il est utile de préciser l’adresse exacte de prise en charge, les informations de voyage pertinentes et les éventuels bagages ou équipements à prévoir.</p>
+                    <p>Pour découvrir les autres liaisons aéroportuaires, consultez nos <a href="/transferts-aeroport/">transferts depuis les aéroports alpins</a>.</p>
                     <ul class="tgc-intro-points" aria-label="Points clés">
                         <li><span class="tgc-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>Aller et retour</li>
                         <li><span class="tgc-point-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>Aéroport ou centre-ville</li>
@@ -132,7 +133,7 @@ $schemaExtra = [
                     <article class="tgc-info-card">
                         <span class="tgc-info-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
                         <h3>Arrivées et départs</h3>
-                        <p>Pour un transfert aéroport Genève Chamonix, indiquez l’horaire souhaité, le terminal ou les informations de vol utiles. Pour un départ depuis Chamonix, précisez l’heure de prise en charge et l’aéroport ou l’adresse à Genève.</p>
+                        <p>Pour un transfert aéroport Genève Chamonix, indiquez l’horaire souhaité, le terminal ou les informations de vol utiles. Pour consulter les informations officielles de l’aéroport, rendez-vous sur le <a href="https://www.gva.ch/fr/" target="_blank" rel="noopener noreferrer">site officiel de l’aéroport de Genève</a>. Pour un départ depuis Chamonix, précisez l’heure de prise en charge et l’aéroport ou l’adresse à Genève.</p>
                     </article>
                     <article class="tgc-info-card">
                         <span class="tgc-info-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s7-6 7-12a7 7 0 1 0-14 0c0 6 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>

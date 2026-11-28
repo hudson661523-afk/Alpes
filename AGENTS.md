@@ -37,6 +37,21 @@ For every page or section request:
 - No keyword stuffing, repetitive headings, duplicate paragraphs, filler, artificial word counts or mass-produced doorway pages.
 - Verify business facts before publishing. Use only supported destinations and services.
 
+## Primary Keyword Usage & Verification
+1. Identify the primary keyword assigned to each URL using the existing keyword mapping in `docs/seo/keyword-url-mapping.md`.
+2. Target 4–5 natural exact-match occurrences in the visible page body, excluding SEO metadata. This is an internal editorial target, NOT an official Google ranking requirement.
+3. Include the primary keyword in the SEO title and H1 where appropriate.
+4. Preserve exact word order and spelling when counting occurrences.
+5. Count case-insensitively.
+6. Do not count reversed word order, synonyms or partial matches as exact matches.
+7. Report occurrences separately for SEO title, H1, visible body and FAQs.
+8. Clearly specify whether H1 and FAQ counts are included in the total body count to avoid double counting.
+9. Do not count alt text, navigation, footer or structured data as visible body occurrences.
+10. Never force keyword repetitions into awkward French, duplicate paragraphs or unnecessary FAQs.
+11. If 4–5 exact uses would reduce readability, use fewer and explain why.
+12. Follow Google Search Central people-first content and spam policies.
+13. Do not automatically rewrite approved existing pages to reach this count. Do not modify the existing keyword-to-URL mapping.
+
 ## Local SEO
 - Relevant places: Chamonix-Mont-Blanc, Geneva Airport, Lyon Airport, Chambéry, Turin, Milan, Zurich, Megève, Annecy, Courmayeur, Argentière and Les Houches.
 - Discuss only destinations and services actually supported.

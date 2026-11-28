@@ -4033,6 +4033,7 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-related .service-link { color:var(--charcoal); border-color:rgba(21,25,28,.24); }
 .tlc-related .service-link:hover,.tlc-related .service-link:focus-visible { color:var(--gold-deep); border-color:rgba(166,124,82,.45); }
 .tlc-final-cta-content h2 { max-width:none; }
+.tlc-final-cta-content p { max-width:680px; width:100%; margin-inline:0; }
 
 @media (max-width:1100px) {
   .tlc-hero-grid,.tlc-intro-grid,.tlc-booking-grid,.tlc-faq-grid,.tlc-section-head { grid-template-columns:1fr; }

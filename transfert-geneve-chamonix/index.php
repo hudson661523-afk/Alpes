@@ -39,7 +39,7 @@ $schemaExtra = [
             <div class="container tgc-hero-content">
                 <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>TRANSFERT GENÈVE – CHAMONIX</p>
                 <h1 class="tgc-hero-title" id="tgc-hero-title">Transfert <em>Genève Chamonix</em></h1>
-                <p class="tgc-hero-lead">Organisez votre transfert privé entre Genève et Chamonix-Mont-Blanc avec Alpes Transport. Depuis l’aéroport de Genève ou le centre-ville, réservez votre trajet vers la vallée de Chamonix, ou dans le sens inverse, selon votre itinéraire.</p>
+                <p class="tgc-hero-lead">Organisez votre transfert Genève Chamonix avec Alpes Transport. Depuis l’aéroport de Genève ou le centre-ville, réservez un trajet privé vers la vallée de Chamonix, ou dans le sens inverse, selon votre itinéraire.</p>
                 <div class="hero-actions tgc-hero-actions">
                     <a class="btn btn-gold" href="https://alpestransport.fr/reserver-en-ligne/" target="_blank" rel="noopener noreferrer">
                         RÉSERVER MON TRANSFERT
@@ -262,7 +262,7 @@ $schemaExtra = [
             <div class="container nos-final-cta-content tgc-final-cta-content">
                 <span class="section-kicker">RÉSERVATION</span>
                 <h2 id="tgc-final-cta-title">Réserver votre transfert <em>Genève–Chamonix</em></h2>
-                <p>Communiquez votre itinéraire, votre date de voyage et les informations utiles pour organiser votre prochain transfert entre Genève et Chamonix-Mont-Blanc.</p>
+                <p>Communiquez votre itinéraire, votre date de voyage et les informations utiles pour organiser votre prochain transfert Genève Chamonix.</p>
                 <div class="final-cta-actions">
                     <a class="btn btn-gold final-cta-btn" href="https://alpestransport.fr/reserver-en-ligne/" target="_blank" rel="noopener noreferrer">
                         RÉSERVER EN LIGNE

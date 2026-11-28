@@ -3937,6 +3937,8 @@ p, h1, h2, h3 { margin-top: 0; }
 .tlc-rule { display:block; width:56px; height:1px; margin-top:28px; background:linear-gradient(90deg,var(--gold),rgba(185,154,100,.2)); }
 .tlc-intro-lead { margin:28px 0 0; max-width:62ch; color:var(--slate-text); font-size:16px; line-height:1.9; }
 .tlc-intro-lead + .tlc-intro-lead { margin-top:16px; }
+.tlc-intro-lead a,.tlc-info-card p a { color:var(--gold-deep); text-decoration:underline; text-decoration-color:rgba(185,154,100,.45); text-underline-offset:3px; transition:color .2s var(--ease), text-decoration-color .2s var(--ease); }
+.tlc-intro-lead a:hover,.tlc-intro-lead a:focus-visible,.tlc-info-card p a:hover,.tlc-info-card p a:focus-visible { color:var(--charcoal); text-decoration-color:var(--gold); }
 .tlc-intro-points { display:flex; flex-wrap:wrap; gap:12px 20px; margin:28px 0 0; padding:22px 0 0; list-style:none; border-top:1px solid rgba(185,154,100,.22); }
 .tlc-intro-points li { display:inline-flex; align-items:center; gap:10px; color:var(--charcoal); font-size:12px; font-weight:600; letter-spacing:.02em; }
 .tlc-point-icon { width:30px; height:30px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; color:var(--gold-deep); background:rgba(185,154,100,.1); border:1px solid rgba(185,154,100,.2); flex-shrink:0; }
